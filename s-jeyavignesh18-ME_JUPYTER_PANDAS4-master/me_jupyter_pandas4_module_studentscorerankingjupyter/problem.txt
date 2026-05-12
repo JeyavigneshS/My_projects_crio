@@ -1,0 +1,108 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset of students' names and their scores in three subjects: Math, Science, and English. 
+Student
+Math
+Science
+English
+John
+94
+74
+64
+Sarah
+97
+67
+89
+Tom
+50
+87
+82
+Emma
+53
+75
+51
+Mark
+53
+63
+59
+Alice
+69
+68
+90
+Bob
+57
+76
+78
+Charlie
+77
+92
+81
+David
+93
+89
+91
+Eve
+85
+88
+83
+Grace
+75
+69
+92
+Hannah
+62
+64
+95
+Ivy
+78
+70
+72
+Jack
+58
+91
+74
+Liam
+65
+83
+85
+Mia
+84
+79
+66
+Nina
+60
+80
+80
+Oscar
+82
+64
+90
+Paul
+91
+77
+96
+Quinn
+56
+86
+71
+
+<br>
+Task:
+Load the Dataset:
+Dataset URL : gitlab
+Load the student data from the provided CSV file into a DataFrame. The dataset should include the columns: `Student`, `Math`, `Science`, and `English`.
+
+
+Calculate Total Score:
+Calculate the total score for each student by summing the scores across the Math, `Science`, and `English` columns.
+Create a new column, `Total Score`, in the DataFrame to store these values.
+
+Apply Ranking Methods:
+For each ranking method (average, min, max, dense), apply the Pandas `rank()` function to rank the students based on their `Total Score`:
+'average': Tied students will receive the average rank for their group.
+'min': Tied students will receive the lowest possible rank in their group.
+'max': Tied students will receive the highest possible rank in their group.
+'dense': Tied students will receive consecutive ranks with no gaps.
+Return the Updated DataFrame:
+Update the DataFrame to include columns for each ranking method (e.g., `Rank_Avg`, `Rank_Min`, `Rank_Max`, `Rank_Dense`), and return the final DataFrame with the rankings for each student.
+

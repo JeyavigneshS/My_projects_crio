@@ -1,0 +1,49 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset in csv that contains product names, categories and their corresponding sales.
+<br>
+Task
+Load the Dataset:
+Dataset URL: gitlab
+Create or load a DataFrame with the columns: `Product`, `Category` and `Sales`.
+
+
+Count Unique Categories:
+Use the `nunique()` function on the Category column to count how many unique categories are present in the dataset.
+
+
+Count Products Per Category:
+Apply the `value_counts()` function on the Category column to determine how many products fall under each category.
+
+
+Return the Results:
+Return the number of unique categories and a frequency distribution of products for each category.
+<br>
+Sample Input
+Consider the following sample Dataset:
+Product
+Category
+TV
+Electronics
+Blender
+Home
+Smartphone
+Electronics
+Book
+Stationery
+Laptop
+Electronics
+Chair
+Home
+
+Sample Output
+Unique Categories Count:
+Output: `3`
+Frequency of Each Category:
+```
+frequency = {
+    'Category': ['Electronics', 'Home', 'Stationery'],
+    'Count': [3, 2, 1]
+}
+```
+

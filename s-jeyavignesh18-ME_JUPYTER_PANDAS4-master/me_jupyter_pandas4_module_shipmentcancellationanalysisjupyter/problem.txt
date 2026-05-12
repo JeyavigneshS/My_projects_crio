@@ -1,0 +1,29 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+As a data analyst at a courier company, you are tasked with analyzing last year's shipment data to determine:
+How many shipments were canceled in the last 3 months.
+The count of delivered shipments.
+The overall shipment count.
+In this task, we focus on analyzing canceled shipments specifically.
+<br>
+Task:
+Get the Dataset:
+Dataset URL: gitlab
+Filter Data for Canceled Shipments:
+Isolate shipments where the status is "Cancelled".
+
+Filter Data for the Last 3 Months:
+Use the `datetime` and `timedelta` modules to calculate the date 90 days ago from today.
+Filter the DataFrame so that only shipments with a `shipment_date` equal to or more recent than this date are kept.
+
+Group Data by Shipment Date (Month):
+Extract the month and year from the shipment_date column.
+Convert the shipment_date column to a period (Year-Month format).
+Group the data by this period and count the number of canceled shipments per month.
+
+Aggregate the Data:
+The aggregation (count) provides the number of canceled shipments for each month.
+
+Return the Results:
+Return the monthly count of canceled shipments.
+

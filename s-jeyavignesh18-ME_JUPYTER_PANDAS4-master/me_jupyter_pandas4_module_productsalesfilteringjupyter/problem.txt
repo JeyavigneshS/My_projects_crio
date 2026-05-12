@@ -1,0 +1,10 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset containing product information, including product names, categories, and sales figures(Units Sold).
+<br>
+Task:
+Load the dataset from the provided URL : gitlab
+Filter the dataset to exclude products with sales under $1,000.
+Apply a combined filter for products with sales over $1,000 in the "Electronics" category.
+Sort by sales and extract the top 100 performing products.
+

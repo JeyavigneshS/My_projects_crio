@@ -1,0 +1,22 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset of Product Sales Data that contains product information, including product names, categories, and sales figures.Your task is to implement a function that performs the following steps:
+<br>
+Task:
+Load the CSV file: 
+Dataset URL: gitlab
+Load the provided CSV file into a Pandas DataFrame. The CSV will contain the following columns: `Product`, `Category`, and `Sales`.
+Drop Duplicates:
+Before performing any analysis, ensure that you remove any duplicate rows in the dataset using the `drop_duplicates()` function to avoid counting the same product multiple times.
+Count Unique Categories: 
+Use the `nunique()` function to count how many unique product categories exist in the dataset.
+List Unique Categories: 
+Utilize the `unique()` function to generate a list of all distinct product categories in the dataset.
+Count Products Per Category: 
+Apply the `value_counts()` function on the Category column to count how many products belong to each category.
+Return the Results:
+The function should return the following:
+The number of unique categories in the dataset.
+A list of the unique product categories.
+The count of products per category.
+

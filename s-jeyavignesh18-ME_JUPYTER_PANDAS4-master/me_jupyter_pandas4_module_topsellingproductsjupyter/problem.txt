@@ -1,0 +1,59 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset that includes product names, categories, and their sales figures. Your task is to rank the products based on their sales figures and return the top N products.
+<br>
+Task:
+Load the Dataset:
+Dataset URL: gitlab
+Load the dataset with the columns: Product, Category, and Sales.
+
+Rank Products by Sales:
+Use the `rank()` function to rank products based on their sales figures. Higher sales should receive a better (lower number) rank.
+
+Select the Top N Products:
+Filter the DataFrame to include only products with a rank less than or equal to N.
+
+Return the Top N Products:
+Display or return the DataFrame containing the top N products along with their sales figures and rank.
+<br>
+Sample Dataset:
+Here is an example of the dataset:
+
+Product
+Category
+Sales
+TV
+Furniture
+2079
+Blender
+Home
+3551
+Smartphone
+Furniture
+2158
+Book
+Electronics
+3948
+Laptop
+Furniture
+4438
+
+Expected Output:
+If you select the top 3 products based on their sales, the output might look like:
+
+
+Product
+Sales
+Rank
+Laptop
+4438
+1
+Book
+3948
+2
+Blender
+3551
+3
+
+
+

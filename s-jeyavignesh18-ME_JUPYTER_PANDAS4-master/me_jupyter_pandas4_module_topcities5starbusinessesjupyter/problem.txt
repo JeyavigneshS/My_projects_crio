@@ -1,0 +1,65 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset containing business names, cities, and ratings.
+<br>
+Task:
+Your task is to analyze this data to determine the number of 5-star businesses in each city and rank the cities based on the number of 5-star businesses.
+
+Load the Dataset:
+Dataset URL: gitlab
+Create or load a dataset with the following columns: `Business`, `City`, and `Rating`.
+
+Filter for 5-Star Businesses:
+Filter the dataset to include only businesses that have a `rating` of `5 stars`.
+
+Group and Count by City:
+Group the filtered dataset by the City column and count how many 5-star businesses are present in each city.
+
+Rank the Cities:
+Sort the grouped results in descending order to rank the cities based on the number of 5-star businesses.
+
+
+Return the Results:
+Return and display the ranked cities along with the count of 5-star businesses.
+<br>
+Sample Dataset:
+Here is an example of how the dataset might look:
+
+Business
+City
+Rating
+Cafe Delight
+New York
+5
+Urban Eatery
+New York
+4
+Sea Breeze
+Miami
+5
+Mountain Dine
+Denver
+5
+Lakeside Inn
+Denver
+5
+City Bistro
+New York
+5
+
+
+Expected Output:
+After filtering for 5-star businesses and grouping by city, the expected output would look like:
+
+City
+Count of 5-Star Businesses
+New York
+2
+Denver
+2
+Miami
+1
+
+
+
+

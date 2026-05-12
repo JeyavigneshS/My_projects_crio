@@ -1,0 +1,89 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset containing employee names, departments, and their salaries. 
+<br>
+Task:
+Your task is to filter and return the list of employees in the 'Marketing' department who earn more than $50,000.
+Load the Dataset:
+Dataset URL: gitlab
+Load a dataset with the following columns: Employee, Department, and Salary.
+Filter by Department:
+Use the `.loc[]` accessor to filter the dataset for employees in the 'Marketing' department.
+Filter by Salary:
+Add a condition to further filter the data for employees with a salary above $50,000.
+Return the Filtered DataFrame:
+The final result should be a DataFrame that contains only those employees in the 'Marketing' department who earn more than $50,000.
+<br>
+Sample Dataset:
+Here is an example of what the dataset might look like:
+
+Employee
+Department
+Salary
+Alice Smith
+Marketing
+55000
+Bob Johnson
+Sales
+48000
+Carol Evans
+Marketing
+49000
+David Brown
+Marketing
+60000
+Emily Davis
+HR
+52000
+
+Expected Output:
+After filtering for employees in the 'Marketing' department with a salary above $50,000, the expected output will be:
+
+Employee
+Department
+Salary
+Alice Smith
+Marketing
+55000
+David Brown
+Marketing
+60000
+
+<br>
+Sample Input 1:
+A dataset of employees, departments, and salaries is given.
+
+Employee
+Department
+Salary
+Alice Smith
+Marketing
+55000
+Bob Johnson
+Sales
+48000
+Carol Evans
+Marketing
+49000
+David Brown
+Marketing
+60000
+Emily Davis
+HR
+52000
+
+Sample Output 1:
+After filtering for employees in the 'Marketing' department with a salary above $50,000, the expected output is:
+
+Employee
+Department
+Salary
+Alice Smith
+Marketing
+55000
+David Brown
+Marketing
+60000
+
+
+

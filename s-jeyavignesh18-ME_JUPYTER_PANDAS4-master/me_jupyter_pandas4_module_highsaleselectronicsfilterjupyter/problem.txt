@@ -1,0 +1,57 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset of Products Sales Data that contains product information, including product names, sales figures, and categories.
+<br>
+Task:
+Load the CSV file: 
+Dataset URL: gitlab
+Load the provided CSV file into a Pandas DataFrame. The CSV will contain the following columns: `Product`, `Category`, and `Sales`.
+Filter by Sales: 
+Use boolean indexing along with the `.loc[]` accessor to filter out products with sales less than or equal to `$1,000`.
+Return only the rows where the Sales column has values greater than `$1,000`.
+Add Category Condition: 
+Extend the filter to include only products that belong to the `Electronics` category. 
+Return only the rows where the Sales column is greater than `$1,000` and the Category column is equal to `Electronics`.
+<br>
+Sample Dataset
+Consider the following sample dataset:
+Product
+Category
+Sales
+TV
+Electronics
+1500
+Blender
+Home
+800
+Smartphone
+Electronics
+2000
+Book
+Stationery
+500
+Laptop
+Electronics
+1800
+Chair
+Home
+1200
+
+<br>
+Expected Output
+After filtering for products with sales above $1,000 and belonging to the "Electronics" category, the filtered DataFrame should look like:
+Product
+Category
+Sales
+TV
+Electronics
+1500
+Smartphone
+Electronics
+2000
+Laptop
+Electronics
+1800
+
+
+

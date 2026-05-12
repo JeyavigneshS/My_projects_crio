@@ -1,0 +1,58 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset containing product names and their corresponding categories. 
+<br>
+Task:
+Load the Dataset:
+Dataset URL: gitlab
+Load the dataset with the columns: `Product` and `Category`.
+
+List Unique Categories:
+Use the `unique()` function on the `Category` column to list all distinct categories available in the dataset.
+
+Count the Occurrence of Each Category:
+Use the `value_counts()` function on the `Category` column to count how many products belong to each category.
+
+Return the Results:
+Return the list of unique categories along with their respective counts.
+Sample Dataset:
+Here is an example of the dataset format:
+
+Product
+Category
+TV
+Electronics
+Blender
+Home
+Smartphone
+Electronics
+Book
+Books
+Laptop
+Electronics
+Chair
+Furniture
+
+
+Expected Output:
+Unique Categories:
+
+['Electronics', 'Home', 'Furniture', 'Books', 'Stationery']
+
+Frequency of Each Category:
+
+Category
+Count
+Furniture
+39
+Home
+30
+Electronics
+27
+Books
+21
+Stationery
+15
+
+
+

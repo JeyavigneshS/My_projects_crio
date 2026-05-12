@@ -1,0 +1,46 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset containing products and their corresponding sales figures. Your task is to load the dataset and rank the products using Pandas' `rank()` function. In this exercise, you will experiment with different ranking methods available in Pandas, including:
+First:
+Assigns ranks to all elements in order of insertion in the array
+Usage:
+`df['Sales'].rank(method='first', ascending=False)`
+Average: 
+Assigns the average rank to tied values.
+Usage:
+`df['Sales'].rank(method='first', ascending=False)`
+Min:
+Assigns the minimum rank to tied values.
+Usage:
+`df['Sales'].rank(method='min', ascending=False)`
+Max:
+Assigns the maximum rank to tied values.
+Usage:
+`df['Sales'].rank(method='max', ascending=False)`
+Dense: 
+Like min, but the next distinct value receives the next rank incremented by one.
+Usage:
+`df['Sales'].rank(method='dense', ascending=False)`
+```
+data = {
+   'Product': [
+       'Wireless Earbuds (Premium)',
+       'Smartwatch (Fitness Edition)',
+       '4K Action Camera',
+       'Robot Vacuum Cleaner',
+       'Noise-Canceling Headphones',
+       'Organic Face Serum',
+       'Electric Toothbrush',
+       'Yoga Mat (Premium)',
+       'Blender (High-Speed)',
+       'E-Reader (Waterproof)'
+   ],
+   'Sales': [100, 100, 90, 85, 80, 80, 75, 70, 65, 60]
+}
+```
+<br>
+Task
+Load the dataset with products and their sales figures.
+Rank the products using the rank() function, experimenting with different ranking methods (average, min, max, dense).
+Compare the rankings for tied products and observe how the different methods affect the ranking order.
+

@@ -1,0 +1,11 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are provided with a dataset that includes product names, categories, sales figures. Dataset URL: gitlab
+<br>
+Task:
+Create a DataFrame with the columns: `Product`, `Category` and `Sales` and load the data from csv.
+Group the data by category to analyze total sales,
+Count product counts within each category.
+Apply aggregation functions such as `groupby`,`sum`, `mean`, and `count`.
+Return the values of `sum`, `mean` and `count`
+
