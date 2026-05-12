@@ -1,0 +1,27 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In educational institutes, it's common to record student marks for different subjects. However, sometimes entries can be missing due to various reasons such as data entry errors. It’s essential for educators to ensure the integrity of the data by handling these missing values effectively.
+<br>
+Problem Description
+Implement a function fill_missing_marks that:
+
+Accepts a pandas DataFrame, df, that contains a column Total Marks.
+Calculates the mean of the available marks in the Total Marks column.
+Fills in any missing values in the Total Marks column with the calculated mean.
+Prints and returns the updated DataFrame with the missing total marks filled.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    'Student': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace'],
+    'Total Marks': [85, None, 90, 78, None, 92, None]\
+}
+```
+<br>
+Sample Output 1
+After running the test case, you must get the following output
+
+<br>
+Explanation
+In this example, Bob, Eve and Grace’s marks were missing (None). The mean of the available marks is 86.25. After executing fill_missing_marks, their scores were replaced with this mean in the output DataFrame.

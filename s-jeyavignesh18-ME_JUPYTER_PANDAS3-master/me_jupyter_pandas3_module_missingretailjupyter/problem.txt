@@ -1,0 +1,32 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In data analysis, it is crucial to identify missing values in datasets to ensure the accuracy and reliability of the results. When analyzing data, it’s common to encounter incomplete datasets where some values may not be recorded. Being able to detect these missing values is a fundamental step in data preprocessing.
+<br>
+Problem Description
+Implement a function detect_missing_values that:
+
+Accepts a DataFrame df.
+Detects missing values in the DataFrame 
+Prints:
+A DataFrame of the same shape as df indicating where the missing values are (True for missing, False for not missing).
+A Series containing the count of missing values per column.
+Returns a tuple containing the above mentioned data.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    "Customer ID": [101, 102, 103, 104, 105],
+    "Name": ["Alice", "Bob", None, "David", "Eve"],
+    "Age": [25, None, 30, 40, 35],
+    "Total Spend ($)": [200.50, None, 150.75, None, 180.00],
+    "City": ["New York", "Los Angeles", "Chicago", None, "Houston"]
+}
+```
+<br>
+Sample Output 1
+After running the test case function you must get the following output
+
+<br>
+Explanation
+The output indicates that columns Name, Age and City have 1 missing value each, column Total Spend ($) has 2 missing values, and column Customer ID has no missing values.

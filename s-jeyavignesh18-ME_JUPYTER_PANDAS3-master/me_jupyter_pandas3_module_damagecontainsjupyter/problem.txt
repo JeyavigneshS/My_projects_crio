@@ -1,0 +1,38 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the world of e-commerce, businesses often rely on customer reviews to maintain quality control and improve overall service. Identifying reviews that mention specific product issues such as missing or damaged items can help businesses address customer concerns more effectively and enhance product offerings.
+<br>
+Problem Description
+Implement a function extract_product_issues that:
+
+Accepts a DataFrame `df` containing customer reviews
+Extracts the reviews that mention product issues such as "missing", "damaged", or "broken" and stores in a new DataFrame
+Prints the old as well as the new DataFrame.
+Returns the new DataFrame.
+<br>
+Notes
+The function should check for the presence of the keywords "missing", "damaged", or "broken", regardless of their case.
+The output DataFrame may be empty if no matching reviews are found.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    'Review ID': [101, 102, 103, 104, 105, 106],
+    'Customer Review': [
+        'The delivery was late, very disappointed!',
+        'Great product, arrived on time.',
+        'I love the phone but the charger was missing.',
+        'Delivery took longer than expected, not happy.',
+        'Excellent quality, highly recommend it!',
+        'The package was damaged upon arrival.'
+    ]
+}
+```
+<br>
+Sample Output 1
+After running the test case, you must get the following output
+
+<br>
+Explantion
+The reviews with review ID 103 and 106 contain the words `missing` and `damaged` respectively, hence, those are the only ones that are added to the new DataFrame.

@@ -1,0 +1,41 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In an e-commerce application, products may be listed with various naming conventions due to different user inputs and vendor specifications. This inconsistency can lead to difficulties in search and inventory management. Standardizing product names is crucial for improving user experience and ensuring consistent data entry for further processing.
+<br>
+Problem Description
+Implement a function standardize_product_names that:
+
+Accepts a Pandas DataFrame `df` as input, which contains a column named Product Name with various naming formats for the same product.
+Standardizes the names according to a predefined set of rules as mentioned in the Notes section, and creates a new DataFrame for the same.
+Prints the old and the new DataFrames.
+Returns the new DataFrame.
+<br>
+Notes
+The standardization rules are as follows:
+Convert the below mentioned variations of "iPhone 13" to iPhone 13:
+IPH 13
+iPhone-13
+Iphone 13
+IPHONE_13
+Convert S21-Samsung to Samsung S21.
+Make sure to create a new DataFrame instead of altering the original one.
+<br>
+Sample Input 1
+DataFrame create from the following dictionary
+```
+{
+    'Product ID': [101, 102, 103, 104, 105, 106],
+    'Product Name': ['IPH 13', 'iPhone-13', 'Iphone 13', 'Samsung S10', 'S21-Samsung', 'IPHONE_13'],
+    'Status': ['Active', 'Active', 'Active', 'Discontinued', 'Active', 'Active'],
+    'Customer Feedback': ['Excellant phone', 'Greate quality', 'Good but battary issue', 'Poor durability', 'Amazing camera', 'Love the feautres']
+}
+```
+<br>
+Sample Output 1
+After running the test cases, you will get the following output
+
+<br>
+Explanation
+The first 3 and the last entries that refer to "iPhone 13" are transformed into a single standardized form.
+The entry 'S21-Samsung' is standardized to 'Samsung S21'.
+Other entries that do not match the specified replacements remain unchanged.

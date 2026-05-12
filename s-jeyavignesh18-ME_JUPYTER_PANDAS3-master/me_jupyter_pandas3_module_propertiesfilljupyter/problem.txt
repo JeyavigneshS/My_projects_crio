@@ -1,0 +1,28 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a real estate market analysis, property prices can often be incomplete due to data entry errors or missing records. When conducting analysis or training predictive models, it is crucial to handle these missing values effectively. In this context, filling in missing property prices with a representative value (like the mean price) allows for more accurate insights and predictions.
+<br>
+Problem Description
+Implement a function fill_missing_property_prices that:
+
+Accepts a pandas DataFrame `df` containing properties data including Property ID, `Location` and `Price ($)`.
+Creates a copy of the DataFrame using copy()
+Fills the missing values in the Price ($) column with the mean property price computed from the available data.
+Prints and returns the modified DataFrame with the missing values addressed.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    'Property ID': [101, 102, 103, 104, 105, 106, 107],
+    'Location': ['Downtown', 'Suburbs', 'Downtown', 'Suburbs', 'City Center', 'Downtown', 'Suburbs'],
+    'Price ($)': [500000, None, 550000, 470000, None, 530000, None]
+}
+```
+<br>
+Sample Output 1
+After running the test, you must  get the following output
+
+<br>
+Explanation
+In the sample input, the mean price is calculated as 512500.0. The missing values in the 'Price ($)' column are then filled using this mean value.

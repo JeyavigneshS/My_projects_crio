@@ -1,0 +1,38 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the world of e-commerce, customers often provide feedback regarding their shopping experience, which includes the speed of delivery. Recognizing and analyzing reviews that mention delivery issues is crucial for businesses to improve their logistics and customer satisfaction.
+<br>
+Problem Description
+Implement a function extract_delivery_issues that:
+
+Accepts a DataFrame `df` containing customer reviews.
+Extracts reviews that mention any delivery-related issues, such as delivery, late, or delay and creates a new DataFrame containing only rows with these reviews.
+Prints the old and the newly created DataFrames.
+Returns the newly created DataFrame as mentioned above.
+<br>
+Notes
+Consider using case-insensitive matching for delivery-related keywords.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    'Review ID': [101, 102, 103, 104, 105, 106],
+    'Customer Review': [
+        'The delivery was late, very disappointed!',
+        'Great product, arrived on time.',
+        'I love the phone but the charger was missing.',
+        'Delivery took longer than expected, not happy.',
+        'Excellent quality, highly recommend it!',
+        'The package was damaged upon arrival.'
+    ]
+}
+```
+<br>
+
+Sample Output 1
+After running the test case you must get the following output
+
+<br>
+Explanation
+The function should return a DataFrame that only includes reviews mentioning either "delivery", "late", or "delay", case insensitive.

@@ -1,0 +1,28 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a city with a dynamic vehicle registration system, authorities maintain a record of vehicles including their license plates and registration dates. However, when processing this data, it’s essential to filter out vehicles that lack critical identification information. Your task is to help clean this dataset by removing records with missing license plates and registration dates.
+<br>
+Problem Description
+Implement a function drop_missing_vehicle_data that:
+
+Accepts a DataFrame df containing vehicle registration information.
+Removes rows where both License Plate and Registration Date are missing using `dropna()`.
+Prints the old and cleaned DataFrame
+Returns the cleaned DataFrame.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+     'Owner Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace'],
+     'License Plate': ['ABC123', None, 'XYZ987', None, 'LMN456', None, None],
+     'Registration Date': ['2023-05-10', None, '2022-11-23', None, '2021-09-15', '2020-07-30', None]
+}
+```
+<br>
+Sample Output 1
+After running the test, you must get the following output
+
+<br>
+Explanation
+In the provided input, the rows for Bob, David and Grace were having missing values for both 'License Plate' and 'Registration Date', so those are removed in the output. The remaining rows contain valuable data and are retained.

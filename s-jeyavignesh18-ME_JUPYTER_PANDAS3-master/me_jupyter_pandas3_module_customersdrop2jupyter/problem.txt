@@ -1,0 +1,28 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a business's CRM system, maintaining up-to-date contact information is crucial for effective communication with customers. Sometimes, however, entries in the database may lack essential contact details like email and phone number. It’s important to ensure that the records maintained do not include entries that have neither of these contact methods.
+<br>
+Problem Description
+Implement a function drop_missing_contacts that:
+
+Accepts a pandas DataFrame df
+Removes rows where both the Email and Phone columns have missing values
+Prints and returns a cleaned DataFrame with the remaining rows
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+    'Customer Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace'],
+    'Email': ['alice@example.com', None, 'charlie@example.com', None, 'eve@example.com', None, None],
+    'Phone': ['1234567890', None, '9876543210', None, '1122334455', '9871234560', None]
+}
+```
+<br>
+Sample Output 1
+ The cleaned dataframe must have no rows with missing values
+
+<br>
+
+Explanation
+In the above example, the original DataFrame had 7 entries, but the cleaned DataFrame omits the entry for Bob, David and Grace as both their 'Email' and 'Phone' fields are missing.

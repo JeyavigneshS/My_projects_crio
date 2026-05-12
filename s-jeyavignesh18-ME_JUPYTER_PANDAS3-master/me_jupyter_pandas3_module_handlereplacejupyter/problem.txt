@@ -1,0 +1,33 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the age of social media, users frequently update their handles, which can lead to confusion when trying to connect with them. For businesses and organizations that maintain databases of users, it’s essential to ensure that contact information, particularly social media handles, is up to date. This problem focuses on creating a function that can efficiently update a list of users' social media handles, reflecting these changes.
+<br>
+Problem Description
+Implement a function update_social_media_handles(df) that:
+
+Accepts a DataFrame df containing data for `User ID`, `User Name` and Social Media Handle
+Updates the Social Media Handle column to reflect the new handles as specified for certain users:
+@alice123 should become @alice_official
+@bob_1990 should become @bob_worldwide
+@charlie_doe should become @charlie_real
+@eve_new should become @eve_official
+@frank007 should become @frank_global
+Prints the old and the new DataFrame with the updated social media handles.
+Returns the new DataFrame.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+test_data = {
+    'User ID': [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
+    'User Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Henry', 'Ivy', 'Jack'],
+    'Social Media Handle': ['@alice123', '@bob_1990', '@charlie_doe', '@david_x', '@eve_new', '@frank007', '@grace_22', '@henry_blog', '@ivy_artist', '@jack_sport']
+}
+```
+<br>
+Sample Output 1
+ After running the test, you must get the following output
+
+<br>
+Explanation
+The input DataFrame contains social media handles that will be updated according to the specified mappings. The returned DataFrame reflects these updates, while the input DataFrame remains unchanged.
