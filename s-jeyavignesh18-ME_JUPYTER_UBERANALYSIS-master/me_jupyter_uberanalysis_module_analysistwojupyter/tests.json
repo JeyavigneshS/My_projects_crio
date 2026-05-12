@@ -1,0 +1,143 @@
+[
+    {
+      "id": "1",
+      "title": "Create new dataframe from columns",
+      "type": "standard",
+      "validation": {
+        "prompt": "Check if a new dataframe is created using selected columns from the original df.",
+        "basis": [
+          "New Dataframe is created",
+          "Selected columns include but not limited to 'request_id', 'driver_id', 'trip_status', 'request_day', 'request_hour', 'start_day', 'start_hour', 'drop_day', 'drop_hour', 'trip_cost', 'ride_delay', 'weather', 'cancellation_reason'",
+          ".columns on new dataframe matches the selected column list exactly"
+        ]
+      },
+      "depends_on": {
+        "testcases": []
+      }
+    },
+    {
+      "id": "2",
+      "title": "Bar chart of requests by day",
+      "type": "visual",
+      "validation": {
+        "prompt": "Validate that a countplot is created showing number of ride requests per day of the week.",
+        "chart_title": "Request Count Vs Day",
+        "basis": [
+          "Chart type is countplot from Seaborn",
+          "Used the new dataframe created",
+          "X-axis represents 'request_day'",
+          "Y-axis represents number of requests",
+          "Chart title is 'Request Count Vs Day'",
+          "Palette is optional"
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "title": "Bar chart of requests by hour",
+      "type": "visual",
+      "validation": {
+        "prompt": "Validate that a countplot is created showing number of ride requests per hour of the day.",
+        "chart_title": "Request Count Vs Hour",
+        "basis": [
+          "Chart type is countplot from Seaborn",
+          "Used the new dataframe created",
+          "X-axis represents 'request_hour'",
+          "Y-axis represents number of requests",
+          "Chart title is 'Request Count Vs Hour'",
+          "Palette is applied"          
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Calculate trip status bifurcation",
+      "type": "standard",
+      "validation": {
+        "prompt": "Verify that trip_status column values are counted and normalized to percentages.",
+        "basis": [
+          "Value counts are calculated for 'trip_status'",
+          "Used the new dataframe created",
+          "Normalization is applied (normalize=True)",
+          "Result is multiplied by 100 to convert to percentage",
+          "Result is Stored in variable 'trip_status_rates'"
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "title": "Pie chart of trip status",
+      "type": "visual",
+      "validation": {
+        "prompt": "Verify a pie chart is created to show percentage of each trip status.",
+        "chart_title": "Trip Status Bifurcation",
+        "basis": [
+          "Chart type is pie chart",
+          "Values of Pie chart should be from 'trip_status_rates'",
+          "Labels are from trip_status_rates.index",
+          "Percentages shown using autopct = '%1.1f%%'",
+          "Title is 'Trip Status Bifurcation'"
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "4"
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "title": "Compute cancellation trends",
+      "type": "standard",
+      "validation": {
+        "prompt": "Ensure cancellation trends are calculated for cancelled trips using value counts on 'cancellation_reason'.",
+        "basis": [
+          "Used the new dataframe created",
+          "Filter applied to select rows where 'trip_status' is 'Trip Cancelled'",
+          "Value counts computed for 'cancellation_reason'",
+          "Result stored in cancellation_trends"
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "title": "Pie chart of cancellation reasons",
+      "type": "visual",
+      "validation": {
+        "prompt": "Verify a pie chart is created to show cancellation reasons distribution.",
+        "chart_title": "Trip Cancellation Trend",
+        "basis": [
+          "Chart type is pie chart",
+          "Labels are from cancellation_trends.index",
+          "Percentages shown using autopct = '%1.1f%%'",
+          "Title is 'Trip Cancellation Trend'"
+        ]
+      },
+      "depends_on": {
+        "testcases": [
+          "6"
+        ]
+      }
+    }
+  ]
+  

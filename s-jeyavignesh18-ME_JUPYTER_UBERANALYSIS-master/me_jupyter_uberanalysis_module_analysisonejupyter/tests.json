@@ -1,0 +1,129 @@
+[
+  {
+    "id": "1",
+    "title": "Calculate total trip cost",
+    "type": "standard",
+    "validation": {
+      "prompt": "Verify that the total_cost column correctly sums trip_cost and extra_tip.",
+      "basis": [
+        "total_cost column exists",
+        "total_cost equals trip_cost + extra_tip for each row"
+      ]
+    },
+    "depends_on": {
+      "testcases": []
+    }
+  },
+  {
+    "id": "2",
+    "title": "Convert timestamps to datetime",
+    "type": "standard",
+    "validation": {
+      "prompt": "Ensure request_timestamp, start_timestamp, and drop_timestamp are converted to datetime format.",
+      "basis": [
+        "request_timestamp column is in datetime64 format",
+        "start_timestamp column is in datetime64 format",
+        "drop_timestamp column is in datetime64 format"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["1"]
+    }
+  },
+  {
+    "id": "3",
+    "title": "Extract date components",
+    "type": "standard",
+    "validation": {
+      "prompt": "Check that request_date, start_date, and drop_date columns correctly extract the date part from timestamps.",
+      "basis": [
+        "request_date contains only YYYY-MM-DD format from request_timestamp",
+        "start_date contains only YYYY-MM-DD format from start_timestamp",
+        "drop_date contains only YYYY-MM-DD format from drop_timestamp"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["2"]
+    }
+  },
+  {
+    "id": "4",
+    "title": "Extract day names from timestamps",
+    "type": "standard",
+    "validation": {
+      "prompt": "Ensure request_day, start_day, and drop_day reflect the correct day of the week.",
+      "basis": [
+        "request_day values are valid day names like Monday, Tuesday etc. from request_timestamp",
+        "start_day values are valid day names like Monday, Tuesday etc. from start_timestamp",
+        "drop_day values are valid day names like Monday, Tuesday etc. from drop_timestamp"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["2"]
+    }
+  },
+  {
+    "id": "5",
+    "title": "Extract time from timestamps",
+    "type": "standard",
+    "validation": {
+      "prompt": "Verify that request_time, start_time, and drop_time correctly represent time in HH:MM:SS.",
+      "basis": [
+        "request_time values are in HH:MM:SS format from request_timestamp",
+        "start_time values are in HH:MM:SS format from start_timestamp",
+        "drop_time values are in HH:MM:SS format from drop_timestamp"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["2"]
+    }
+  },
+  {
+    "id": "6",
+    "title": "Extract hour from timestamps",
+    "type": "standard",
+    "validation": {
+      "prompt": "Ensure request_hour, start_hour, and drop_hour correctly capture the hour of the day.",
+      "basis": [
+        "request_hour values are integers between 0 and 23 from request_timestamp",
+        "start_hour values are integers between 0 and 23 from start_timestamp",
+        "drop_hour values are integers between 0 and 23 from drop_timestamp"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["2"]
+    }
+  },
+  {
+    "id": "7",
+    "title": "Calculate ride delay in hours",
+    "type": "standard",
+    "validation": {
+      "prompt": "Validate that the ride_delay column reflects the delay between drop and start timestamps in hours.",
+      "basis": [
+        "ride_delay column exists",
+        "ride_delay is calculated as difference between start timestamp and request timestamp in hours"
+      ]
+    },
+    "depends_on": {
+      "testcases": ["2"]
+    }
+  },
+  {
+    "id": "8",
+    "title": "Assign cancellation reasons",
+    "type": "standard",
+    "validation": {
+      "prompt": "Check if the cancellation_reason column correctly classifies cancellation scenarios.",
+      "basis": [
+        "No Cabs when driver_id = -1 and trip_status = 'No Cars Available'",
+        "Passenger when driver_id = -1 and trip_status = 'Trip Cancelled'",
+        "Driver when driver_id != -1 and trip_status = 'Trip Cancelled'",
+        "Trip Completed in all other cases"
+      ]
+    },
+    "depends_on": {
+      "testcases": []
+    }
+  }
+]

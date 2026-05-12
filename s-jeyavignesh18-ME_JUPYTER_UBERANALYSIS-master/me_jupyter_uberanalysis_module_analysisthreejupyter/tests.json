@@ -1,0 +1,102 @@
+[
+    {
+      "id": "1",
+      "title": "Filter incomplete ride records",
+      "type": "standard",
+      "validation": {
+        "prompt": "Ensure the dataframe only includes records where trip_status is not 'Trip Completed' and has the specified columns.",
+        "basis": [
+          "New datafram is created with trip_status column filtered to exclude 'Trip Completed'",
+          "Selected columns should include but not limited to request_id, pickup_point, drop_point, driver_id, trip_status, payment_method, weather, request_day, request_hour, cancellation_reason",
+          ".columns on new dataframe matches the selected column list exactly"
+        ]
+      },
+      "depends_on": {
+        "testcases": []
+      }
+    },
+    {
+      "id": "2",
+      "title": "Pie chart of incomplete trip statuses",
+      "type": "visual",
+      "validation": {
+        "prompt": "Verify a pie chart is created showing distribution of trip_status for incomplete rides.",
+        "chart_title": "Proportion of Incomplete Ride Statuses",
+        "basis": [
+          "Chart type is pie chart",
+          "Dataframe used is the new dataframe created where trip_status is not 'Trip Completed'",
+          "Uses trip_status column value counts",
+          "Chart title is 'Proportion of Incomplete Rides Trip Statuses'",
+          "Displays percentage values on chart",
+          "Color is assigned to the chart",
+          "Startangle is optional"
+        ]
+      },
+      "depends_on": {
+        "testcases": ["1"]
+      }
+    },
+    {
+      "id": "3",
+      "title": "Histogram of cancellations by day",
+      "type": "visual",
+      "validation": {
+        "prompt": "Validate the histogram that shows number of incomplete rides per day categorized by cancellation reason.",
+        "chart_title": "Incomplete Rides by Day and Reason",
+        "basis": [
+          "Chart type is stacked histogram",
+          "Dataframe used is the new dataframe created where trip_status is not 'Trip Completed'",
+          "Hue is based on cancellation_reason",
+          "Histogram is binned into 7",
+          "X-axis represents request_day with label as 'Day'",
+          "Y-axis represents number of incomplete rides with label as 'Number of Incomplete Rides'",
+          "Chart title is 'Incomplete Rides by Day and Reason'"
+        ]
+      },
+      "depends_on": {
+        "testcases": ["1"]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Histogram of cancellations by hour",
+      "type": "visual",
+      "validation": {
+        "prompt": "Check if a histogram shows incomplete rides across hours of the day split by cancellation reason.",
+        "chart_title": "Incomplete Rides by Hour and Reason",
+        "basis": [
+          "Chart type is stacked histogram",
+          "Dataframe used is the new dataframe created where trip_status is not 'Trip Completed'",
+          "Hue is based on cancellation_reason",
+          "Histogram is binned into 24",
+          "X-axis represents request_hour with label as 'Hour of the Day'",
+          "Y-axis represents number of incomplete rides with label as 'Number of Incomplete Rides'",
+          "Chart title is 'Incomplete Rides by hour and Reason'"
+        ]
+      },
+      "depends_on": {
+        "testcases": ["1"]
+      }
+    },
+    {
+      "id": "5",
+      "title": "Bar chart of weather vs cancellation",
+      "type": "visual",
+      "validation": {
+        "prompt": "Ensure a grouped bar chart is shown for count of cancellations per weather condition by reason.",
+        "chart_title": "Cancellations by Weather and Reason per Ride Type",
+        "basis": [
+          "Data is grouped by weather and cancellation_reason",
+          "Dataframe used is the new dataframe created where trip_status is not 'Trip Completed'",
+          "Chart title is 'Cancellations by Weather and Reason per Ride Type'",
+          "Chart type is grouped bar chart using seaborn .barplot",
+          "X-axis represents weather conditions with label as 'Weather Conditions'",
+          "Y-axis shows count of cancellations with label as 'Count of Cancellations'"
+        ]
+      },
+      "depends_on": {
+        "testcases": ["1"]
+      }
+    }
+  ]
+  
