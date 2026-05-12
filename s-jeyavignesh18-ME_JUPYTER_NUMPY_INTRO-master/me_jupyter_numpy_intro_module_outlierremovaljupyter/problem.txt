@@ -1,0 +1,38 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are tasked with calculating the median of a given list of test scores using NumPy. The median is the middle value of the data when sorted in order. If there is an even number of values, the median is the average of the two middle values.
+
+Your task is to implement a function that calculates the median of the scores using the NumPy library.
+<br>
+Function Signature:
+```
+calculate_median(scores)
+```
+Where:
+`scores` is a list or NumPy array containing the test scores of students.
+
+The function should return the median value of the scores.
+<br>
+Sample Input 1:
+```
+[90, 80, 85, 70, 95]
+```
+Sample Output 1:
+```
+85.0
+```
+<br>
+Sample Input 2:
+```
+[100, 100, 90, 80, 70, 60]
+```
+Sample Output 2:
+```
+85.0
+```
+<br>
+Notes
+You must use NumPy to calculate the median of the input list.
+The function should handle any list of numerical values passed to it.
+In case of an even number of elements, return the average of the two middle values.
+

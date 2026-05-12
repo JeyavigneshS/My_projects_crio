@@ -1,0 +1,42 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are tasked with calculating the mode of a given list of test scores using NumPy and SciPy. The mode is the most frequently occurring value(s) in the data. If there are multiple values with the same highest frequency, the mode will return all of them.
+
+Your task is to implement a function that calculates the mode of the scores using the SciPy library in combination with NumPy.
+
+About SciPy:
+SciPy is a Python library used for scientific and technical computing. It builds on NumPy and provides additional functionality. In this problem, we will use `scipy.stats.mode()` to efficiently calculate the mode of a dataset.
+
+<br>
+Function Signature:
+```
+calculate_mode(scores)
+```
+Where:
+`scores` is a list or NumPy array containing the test scores of students.
+
+The function should return the mode(s) of the scores.
+<br>
+Sample Input 1:
+```
+[90, 80, 85, 70, 95, 85]
+```
+Sample Output 1:
+```
+85
+```
+<br>
+Sample Input 2:
+```
+[100, 100, 90, 80, 70, 60, 70, 70]
+```
+Sample Output 2:
+```
+70
+```
+<br>
+Notes
+You must use SciPy’s `stats.mode()` function to calculate the mode of the input list.
+The function should return the most frequent value(s).
+In case there are multiple modes (a tie in frequency), return all the modes in ascending order.
+

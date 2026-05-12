@@ -1,0 +1,43 @@
+Traffic Flow Analysis - Busiest Intersection
+Use Case
+The city traffic department wants to determine the busiest intersection based on traffic data collected over multiple time intervals. This helps in optimizing traffic management and infrastructure planning.
+<br>
+Problem Description
+Implement the function `find_busiest_intersection(traffic_data)`, which:
+
+Accepts a 2D NumPy array `traffic_data`, where each row represents an intersection and each column represents traffic count at different times.
+Computes the total traffic at each intersection.
+Returns the `index` of the intersection with the highest total traffic.
+<br>
+Notes
+If multiple intersections have the same total traffic, return the smallest index.
+The input is guaranteed to have at least one intersection.
+Sample Input:
+```
+traffic_data = np.array([
+    [200, 180, 220],  
+    [150, 170, 190],  
+    [300, 310, 290]  
+])
+```
+Sample Output:
+```
+2
+```
+Explanation:
+Intersection 0: `200 + 180 + 220 = 600`
+Intersection 1: `150 + 170 + 190 = 510`
+Intersection 2: `300 + 310 + 290 = 900` (highest total traffic)
+The busiest intersection is `index 2`.
+<br>
+Checklist
+Approach Level 1:
+Use NumPy operations to `sum` traffic counts across each row.
+Iterate through the sum array to find the index with the maximum value.
+Track max traffic and its index using a for loop.
+Approach Level 2 (Pseudo Code):
+Compute the `total` traffic for each intersection using `np.sum(axis=1)`.
+Find the index of the `max traffic` using `np.argmax()`.
+Return this index as the result.
+
+

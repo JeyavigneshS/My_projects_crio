@@ -1,0 +1,83 @@
+PROBLEM TASK - PRIMARY
+Concept Recap
+Matrix transposition involves swapping rows and columns in a matrix. This operation is useful when you need to reorganize data for easier comparison across different dimensions (e.g., products vs. months). By transposing, you change the perspective from rows to columns.
+
+Example: Given a matrix:
+
+Product
+Jan
+Feb
+Mar
+Smartphone
+200
+180
+220
+Laptop
+150
+170
+160
+Headphones
+300
+320
+310
+
+
+Transposing it gives:
+
+Month
+Smartphone
+Laptop
+Headphones
+Jan
+200
+150
+300
+Feb
+180
+170
+320
+Mar
+220
+160
+310
+
+<br>
+Problem Description
+You are given a 2D list `sales_matrix` where each row represents a product and each column represents a month. Implement the function `transpose_sales_data()` that:
+Accepts a 2D list of sales data.
+Transposes the matrix (switch rows with columns).
+Returns the transposed matrix.
+<br>
+Function Signature:
+```
+def transpose_sales_data(sales_matrix):
+```
+<br>
+Notes
+The input matrix will always be valid with at least one row and column.
+<br>
+Sample Input:
+```
+sales_matrix = [
+  [200, 180, 220],
+  [150, 170, 160],
+  [300, 320, 310]
+]
+```
+Sample Output:
+```
+[[200, 150, 300],
+[180, 170, 320],
+[220, 160, 310]]
+```
+<br>
+Explanation:
+After transposition, each column corresponds to a product's sales data for different months.
+<br>
+Checklist
+Approach Level 1:
+Understand the need for transposing the data to make comparisons easier.
+Approach Level 2:
+Loop through the columns of the original matrix and turn them into rows in the new matrix.
+
+

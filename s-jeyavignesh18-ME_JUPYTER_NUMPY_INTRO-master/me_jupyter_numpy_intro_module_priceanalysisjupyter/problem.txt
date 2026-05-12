@@ -1,0 +1,56 @@
+PROBLEM TASK - PRIMARY
+Use Case
+An e-commerce platform needs to perform price analysis for products in a specific category. However, some of the product prices are missing (represented by NaN values). The platform wants to compute the average price (mean), the median price, and the most common price (mode), excluding the missing values.
+<br>
+Problem Description
+Implement a function `analyze_prices(prices)` that:
+Accepts a list of product prices, some of which may be NaN.
+Calculates the `mean`, `median`, and `mode` of the prices, excluding the NaN values.
+Returns a dictionary containing the `mean`, `median`, and `mode` values, in that order.
+<br>
+Function Signature:
+```
+def analyze_prices(prices)
+```
+<br>
+Notes
+You can assume the list `prices` will contain at least one non-NaN value.
+If all values in the list are NaN, the function should return the values as `None`.
+<br>
+Sample Input 1:
+```
+prices = [100, 150, 200, np.nan, 250, 150, np.nan, 300]
+```
+Sample Output 1:
+```
+{
+    "mean": 175.0,
+    "median": 150.0,
+    "mode": 150.0
+}
+```
+<br>
+Sample Input 2:
+```
+prices = [np.nan, np.nan, np.nan]
+```
+Sample Output 2:
+```
+{
+    "mean": None,
+    "median": None,
+    "mode": None
+}
+```
+<br>
+Checklist
+Approach Level 1:
+The task involves handling missing values (NaN) and calculating basic statistical measures (mean, median, mode).
+Exclude NaN values from calculations and use NumPy functions to simplify the process.
+Approach Level 2:
+Iterate over the input list and filter out the NaN values.
+Use NumPy to calculate the mean, median, and mode:
+Mean can be calculated using `np.mean()`.
+Median can be calculated using `np.median()`.
+Mode can be calculated using `scipy.stats.mode()`.
+

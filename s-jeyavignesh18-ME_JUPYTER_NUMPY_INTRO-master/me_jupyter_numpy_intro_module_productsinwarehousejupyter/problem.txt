@@ -1,0 +1,54 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are tasked with managing inventory for a set of products across four different warehouses: `Central`, `North`, `South`, and `West`. Each warehouse has a list of products, and you need to keep track of the quantities of each product in these locations.
+
+Your job is to efficiently update these inventories when:
+
+New shipments are received at each warehouse.
+Products are shipped out from the warehouses.
+
+You will need to implement the following tasks:
+Task 1: Update Inventory with New Shipments
+You are given an initial inventory of products in each warehouse. Each product has a quantity in each of the four warehouses. When new shipments arrive at each warehouse, the quantities need to be updated accordingly.
+<br>
+Task 2: Update Inventory After Shipping Out Products
+When products are shipped out from each warehouse, the quantities need to be reduced. The products are removed from the warehouse inventory according to the shipped-out quantities.
+<br>
+Task 3: Display the Current Inventory
+After updating the inventory, display the updated quantities for each product in each warehouse.
+<br>
+Task 4: Display Function
+To visualize the updates, create a function to display the updated inventory in a readable format.
+
+print_inventory(central_warehouse, north_warehouse, south_warehouse, west_warehouse, header)
+
+This function prints the inventory status of all products in the four warehouses, formatted with the provided header.
+<br>
+Function Signature
+```
+update_inventory(central_warehouse, north_warehouse, south_warehouse, west_warehouse, updates, add=True)
+```
+
+Where:
+`central_warehouse`, `north_warehouse`, `south_warehouse`, `west_warehouse`: Lists of integers representing the quantities of each product in the corresponding warehouse.
+`updates`: A list of lists representing the update quantities for each warehouse. Each sublist corresponds to a warehouse and contains the update quantities for each product.
+`add`: A boolean value. If `True`, the function should add the update quantities to the warehouse inventories. If `False`, it should subtract the update quantities (for shipped-out products).
+
+The function should return the updated quantities for each warehouse.
+<br>
+Notes
+Ensure that all updates to the inventories are reflected correctly in all warehouses.
+Handle both additions and subtractions efficiently (depending on whether it’s a shipment or a shipment out).
+After each update (new shipment or shipped-out), display the inventory for all warehouses.
+<br>
+Checklist
+Approach Level 1:
+Use loops to iterate over each warehouse and each product.
+Apply updates efficiently using the add flag to either add or subtract the quantities.
+Ensure that the data structure used to track inventories supports fast updates.
+Approach Level 2:
+Initialize the warehouses and products.
+For each product, update the quantities in each warehouse using the provided updates list.
+After updating, use a helper function to display the inventory in a structured format.
+
+

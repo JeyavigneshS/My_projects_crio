@@ -1,0 +1,53 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+A movie recommendation system needs to estimate a missing movie rating for a user based on available ratings using basic matrix operations.
+
+Implement a function `predict_rating(ratings, user_index, movie_index)` that:
+Accepts a `ratings` matrix where each row represents a user and each column represents a movie's rating. Missing ratings are represented as `np.nan`.
+Takes `user_index`, representing the target user.
+Takes` movie_index`, representing the target movie.
+Returns the predicted rating using the average rating of other users who have rated the movie.
+<br>
+Notes
+If no other users have rated the movie, return `np.nan`.
+Use NumPy functions for efficient computation.
+<br>
+Sample Input 1:
+```
+ratings = np.array([
+    [4, 5, np.nan],
+    [2, 3, 5],
+    [5, 5, 4]
+])
+
+user_index = 0
+movie_index = 2
+```
+Sample Output 1:
+```
+4.5
+```
+<br>
+Sample Input 2:
+```
+ratings = np.array([
+    [4, np.nan, 3],
+    [2, 3, 5],
+    [5, 5, np.nan]
+])
+
+user_index = 0
+movie_index = 1
+```
+Sample Output 2:
+```
+4.0
+```
+<br>
+Checklist
+Approach 1:
+Extract ratings for the given movie.
+Ignore `np.nan` values.
+Compute the average rating of available values.
+Return the computed value.
+

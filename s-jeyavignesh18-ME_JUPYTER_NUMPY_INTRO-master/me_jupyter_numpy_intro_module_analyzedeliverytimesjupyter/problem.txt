@@ -1,0 +1,29 @@
+Use Case
+A food delivery company wants to analyze delivery times based on past orders. To assess performance and improve operations, they ask different questions requiring statistical analysis.
+<br>
+Problem Description
+Implement a function `analyze_delivery_data(delivery_times)` that:
+
+Accepts:
+`delivery_times (a list of integers)` representing delivery times in minutes.
+Returns:
+The correct statistical measure (mean, median, or mode).
+Uses:
+NumPy and SciPy to compute the required statistics.
+<br>
+Notes
+The function only takes delivery times as input.
+<br>
+Input:
+```
+delivery_times = [30, 32, 34, 35, 40]
+```
+Output:
+```
+34.2
+```
+<br>
+Checklist
+Approach Level 1:
+We need to calculate the mean since the question asks for a trend.
+

@@ -1,0 +1,47 @@
+PROBLEM TASK - PRIMARY
+Use Case
+A sports coach wants to evaluate player performance based on multiple skill metrics to determine the best overall player.
+Problem Description
+Implement a function `find_best_player(players)` that:
+
+Accepts a 2D NumPy array `players`, where each row represents a player and each column represents a skill metric.
+Computes an overall performance score for each player.
+Returns the index of the best-performing player.
+<br>
+Notes
+Use NumPy operations such as dot product, arithmetic operations, and statistical functions where applicable.
+The dataset may contain `np.nan` values, which should be ignored when computing scores.
+In case of a tie, return the lowest index.
+<br>
+Sample Input 1:
+```
+players = np.array([[8, 9, 7], [6, 7, 8], [9, 8, 9]])
+find_best_player(players)
+```
+Output 1:
+```
+2
+```
+
+Explanation: The overall scores for each player are `[8.0, 7.0, 8.67]`, and the highest score belongs to player index `2`.
+
+<br>
+Sample Input 2:
+```
+players = np.array([[5, 6, np.nan], [7, 8, 9], [5, 5, 5]])
+find_best_player(players)
+```
+Output 2:
+```
+1
+```
+Explanation: The scores are computed by ignoring `np.nan`. The highest score belongs to player index `1`.
+<br>
+Checklist
+Approach Level 1:
+Iterate through each player's row in the matrix.
+Compute the player's mean score while ignoring np.nan values.
+Track the index of the player with the highest score.
+Return the index of the best player.
+
+

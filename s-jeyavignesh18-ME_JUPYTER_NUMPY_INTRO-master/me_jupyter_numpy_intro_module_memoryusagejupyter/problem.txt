@@ -1,0 +1,40 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+Implement two functions to compare the memory usage of a Python list and a NumPy array, both containing integers from `0` to `n-1` (1 ≤ n ≤ 10,000):
+List-based approach:
+Create a Python list of integers from `0` to `n-1`. Use `sys.getsizeof()` to calculate the memory of the list container and each element. Print and return the total memory used.
+NumPy-based approach:
+Create a NumPy array of integers from `0` to `n-1`. Use `.nbytes` to calculate the memory of the array’s elements. Print and return the total memory used.
+Function Signatures:
+```
+memory_usage_list(n)
+memory_usage_numpy(n)
+```
+<br>
+Sample Input 1:
+```
+5
+```
+Sample Output 1:
+```
+Python list container only: 120 bytes
+Python list (container + elements): 320 bytes
+NumPy array: 40 bytes
+```
+<br>
+Sample Input 2:
+```
+10
+```
+Sample Output 2:
+```
+Python list container only: 160 bytes
+Python list (container + elements): 640 bytes
+NumPy array: 80 bytes
+```
+
+<br>
+Notes
+Python List: Sum the memory of the list container and each element using sys.getsizeof().
+NumPy Array: Use .nbytes to measure the memory of the array’s elements.
+

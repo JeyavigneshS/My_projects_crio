@@ -1,0 +1,61 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are building a food delivery system. Each order contains multiple dishes, where each dish consists of ingredients.
+
+Customers can customize their order by replacing the first ingredient of the first dish with one of the following alternatives, only if the first ingredient is not already in the alternatives.
+<br>
+Replace the first ingredient of the first dish with one of the following alternatives:
+`['orange', 'mango', 'pear', 'pineapple']`
+If the first ingredient is already one of the alternatives, do not change it.
+Return:
+The modified list (first ingredient of the first dish replaced).
+The original list, which should remain unchanged.
+<br>
+Function signature:
+```
+def modify_order(order):
+```
+<br>
+Input:
+A list order, where each element is a dish, represented as a list of ingredients. The list contains only one order.
+<br>
+Output:
+Two lists:
+The modified order with the first ingredient of the first dish replaced.
+The original order, which remains unchanged.
+<br>
+Sample Input 1
+```
+['apple', 'banana', 'carrot']
+```
+Sample Output 1
+```
+['orange', 'banana', 'carrot']
+['apple', 'banana', 'carrot']
+```
+<br>
+Sample Input 2
+```
+['orange', 'banana', 'carrot']
+```
+Sample Output 2
+```
+['orange', 'banana', 'carrot']
+['orange', 'banana', 'carrot']
+```
+<br>
+Sample Input 3
+```
+['banana', 'apple', 'carrot']
+```
+Sample Output 3
+```
+['orange', 'apple', 'carrot']
+['banana', 'apple', 'carrot']
+```
+<br>
+Notes:
+The first ingredient of the first dish should be replaced only if it is not already one of the alternatives.
+The original order must remain unchanged.
+
+

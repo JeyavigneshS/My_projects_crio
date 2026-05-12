@@ -1,0 +1,76 @@
+PROBLEM TASK - PRIMARY
+Concept Recap
+In statistics, measures of central tendency (mean, median, and mode) summarize a dataset with a single representative value.
+
+`Mean`: The sum of all values divided by the number of values.
+`Median`: The middle value in a sorted list of numbers. If there is an even number of values, it’s the average of the two middle ones.
+`Mode`: The most frequent value in the dataset.
+
+Outliers (extreme values) can distort the mean, making it less representative. The `median` is more robust to outliers.
+<br>
+Problem Description
+A real estate analyst needs to find the typical home price in a neighborhood, but the dataset includes unusually high prices that might skew the result.
+
+Write a function `find_central_tendency(prices)` that:
+`Returns the mean` if there are `no outliers` (prices ≤ $1,000,000).
+`Returns the median` if there are `outliers` (any price > $1,000,000).
+`Returns the mode` if `all values are identical`.
+If all values are unique, return `None` for mode.
+Outlier Detection:
+Consider a price `above $1,000,000` as an outlier.
+If outliers are present, always return the `median`.
+If no outliers, return the `mean` unless all values are identical.
+<br>
+Function Signature:
+```
+def find_central_tendency(prices):
+```
+<br>
+Sample Input 1:
+```
+[200000, 250000, 300000, 1000000, 1200000]
+```
+Sample Output 1:
+```
+Median: 300000
+```
+<br>
+Sample Input 2:
+```
+[500000, 500000, 500000, 500000, 500000]
+```
+Sample Output 2:
+```
+Mode: 500000
+```
+<br>
+Sample Input 3:
+```
+[200000, 250000, 300000, 500000]
+```
+Sample Output 3:
+```
+Mean: 312500
+```
+<br>
+Sample Input 4:
+```
+[100000, 200000, 300000, 1000000]
+```
+Sample Output 4:
+```
+Median: 300000
+```
+<br>
+Checklist
+Approach Level 1:
+Step 1: Calculate the `mode` if all values are identical.
+Step 2: `Check for outliers`. If any price is greater than $1,000,000, return the `median`.
+Step 3: If no outliers, return the `mean`.
+Approach Level 2:
+Sort the prices.
+Use `np.unique()` to check for the mode.
+Check for `outliers` (prices > $1,000,000).
+If there are no outliers, calculate the `mean` using `np.mean()`.
+If outliers are present, calculate the median using `np.median()`.
+

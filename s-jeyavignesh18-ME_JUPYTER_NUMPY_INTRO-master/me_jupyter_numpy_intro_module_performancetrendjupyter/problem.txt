@@ -1,0 +1,39 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are tasked with calculating the mean of a given list of test scores using NumPy. The mean is the average of all the elements in the list, which gives you a sense of the overall performance.
+
+Your task is to implement a function that calculates the mean of the scores using the NumPy library.
+
+<br>
+Function Signature:
+```
+calculate_mean(scores)
+```
+Where:
+scores is a list or NumPy array containing the test scores of students.
+
+The function should return the mean (average) value of the scores.
+
+<br>
+Sample Input 1:
+```
+[90, 80, 85, 70, 95]
+```
+Sample Output 1:
+```
+84.0
+```
+<br>
+Sample Input 2:
+```
+[100, 100, 90, 80, 70]
+```
+Sample Output 2:
+```
+88.0
+```
+<br>
+Notes
+You must use NumPy to calculate the mean of the input list.
+The function should handle any list of numerical values passed to it.
+

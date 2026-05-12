@@ -1,0 +1,52 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+You are tasked with managing inventory for a set of products across four different warehouses: `Central`, `North`, `South`, and `West`. Each warehouse holds quantities of various products, and you need to update these quantities when:
+`New shipments` are received at each warehouse.
+`Products are shipped out` from the warehouses.
+
+Instead of tracking inventory using lists, which can become slow and inefficient as more products are added, you will use `NumPy 2D arrays` for faster and more efficient updates.
+
+You need to implement the following tasks:
+Task 1: Update Inventory with New Shipments
+You are given an initial inventory for each product across the four warehouses. When new shipments arrive at each warehouse, you will update the quantities accordingly.
+<br>
+Task 2: Update Inventory After Shipping Out Products
+When products are shipped out from each warehouse, the inventory quantities must be reduced accordingly.
+<br>
+Task 3: Display the Current Inventory
+After updating the inventory, display the updated quantities for each product in each warehouse in a structured format.
+<br>
+Task 4: Display Function
+To visualize the updates, implement a function to display the updated inventory from the `NumPy 2D array`.
+
+```
+print_inventory_2d(inventory_matrix, header)
+```
+This function will print the product quantities in all warehouses with a given header.
+<br>
+Function Signature
+```
+update_inventory(inventory_matrix, updates, add=True)
+```
+Where:
+`inventory_matrix`: A `NumPy 2D array` representing the quantities of each product in the four warehouses.
+`updates`: A `NumPy 2D array` representing the quantities to be added or subtracted for each product in each warehouse.
+`add`: A boolean value. If `True`, the function should add the `updates` to the `inventory_matrix`. If `False`, it should subtract the `updates` (for shipped-out products).
+
+The function should return the updated `NumPy 2D array` after applying the updates.
+<br>
+Notes
+The inventory matrix is represented as a `NumPy 2D array`, where each row corresponds to a product, and each column corresponds to a warehouse.
+Updates are provided as a `NumPy 2D array` with the same dimensions as the inventory matrix.
+Use the `add` parameter to decide whether to add or subtract the updates from the inventory matrix.
+Checklist
+Approach Level 1:
+Use `NumPy arrays` for efficient matrix operations.
+Apply updates directly by adding or subtracting matrices.
+Use loops to print the inventory in a structured format with clear product and warehouse names.
+Approach Level 2:
+Initialize the inventory matrix and updates as `NumPy 2D arrays`.
+Update the inventory matrix based on the `add` flag using matrix addition or subtraction.
+Use the helper function `print_inventory_2d()` to display the updated inventory in a readable format after each update.
+
+

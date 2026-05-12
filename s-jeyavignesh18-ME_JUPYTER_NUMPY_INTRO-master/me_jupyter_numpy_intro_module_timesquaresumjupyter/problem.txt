@@ -1,0 +1,39 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+Implement two functions to compute the sum of squares of all integers from `1` to `n` (where 1 ≤ n ≤ 1,000,000):
+List-based approach:
+This function will create a list of integers from 1 to n, square each integer, and sum them up.
+Measure and print the time taken for the operation using time.time().
+NumPy-based approach:
+This function will utilize NumPy to generate an array of integers from 1 to n, square them, and compute the sum using np.sum().
+Measure and print the time taken for this operation using time.time().
+
+Each function should return the sum of squares and print the time taken for the computation.
+
+Function Signatures:
+`sum_of_squares_list(n)`
+`sum_of_squares_numpy(n)`
+
+Both functions should print the time taken for the computation in seconds, and return the computed sum of squares.
+
+<br>
+Sample Inputs and Outputs
+Input 1:
+```
+3
+```
+Output 1:
+```
+14
+```
+
+Explanation:
+For n = 3, the sum of squares is ( 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14 ).
+Input 2:
+5
+Output 2:
+55
+
+Explanation:
+For n = 5, the sum of squares is ( 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 1 + 4 + 9 + 16 + 25 = 55 ).
+

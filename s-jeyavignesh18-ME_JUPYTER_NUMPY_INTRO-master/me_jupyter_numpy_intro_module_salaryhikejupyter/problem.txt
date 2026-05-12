@@ -1,0 +1,74 @@
+PROBLEM TASK - PRIMARY
+Concept Recap
+Scalar multiplication refers to the process of multiplying each element of a matrix by a scalar (a constant value). In practical applications, this can be used to apply uniform adjustments, such as increasing all salaries in a matrix by a fixed percentage. In NumPy, scalar multiplication is straightforward and efficient.
+Example:
+Given a matrix `A = [[1, 2], [3, 4]]` and a scalar `k = 2`, scalar multiplication results in:
+
+```
+k * A = [[2, 4], [6, 8]]
+```
+<br>
+Problem Description
+You are an HR manager at a company and need to apply a 10% salary increase to all employees across different departments. You will do this by performing matrix scalar multiplication using NumPy.
+
+Implement a function `apply_salary_increase(salary_matrix, scalar)` that:
+Accepts a 2D NumPy array `salary_matrix` representing current salaries of employees across various departments.
+Accepts a scalar `scalar` which will be used to apply the percentage increase (e.g., `1.10` for a 10% increase).
+Returns a new matrix where each salary has been multiplied by the scalar to reflect the salary increase.
+<br>
+Notes
+The salary matrix will have 3 rows (departments) and 3 columns (employees in each department).
+The scalar value will be a floating-point number.
+Use NumPy for matrix manipulation.
+<br>
+Sample Input 1:
+```
+salary_matrix = np.array([
+[40, 45, 50],
+[55, 60, 50],
+[70, 75, 80]
+])
+
+scalar = 1.10
+```
+Sample Output 1:
+```
+array([
+[44.0, 49.5, 55.0],
+[60.5, 66.0, 55.0],
+[77.0, 82.5, 88.0]
+])
+```
+Explanation:
+Each salary in the matrix is multiplied by `1.10`, resulting in the new salaries for all employees.
+<br>
+Sample Input 2:
+```
+salary_matrix = np.array([
+[100, 120, 130],
+[150, 160, 140],
+[200, 210, 220]
+])
+
+scalar = 1.05
+```
+Sample Output 2:
+```
+array([
+[105.0, 126.0, 136.5],
+[157.5, 168.0, 147.0],
+[210.0, 220.5, 231.0]
+])
+```
+Explanation:
+Each salary in the matrix is multiplied by `1.05`, reflecting a 5% salary increase.
+<br>
+Checklist
+Approach Level 1:
+Understand the concept of matrix scalar multiplication. Each element of the matrix is multiplied by the scalar value to adjust the salaries.
+Approach Level 2:
+Define a function `apply_salary_increase` that accepts a matrix and scalar.
+Perform the matrix multiplication with the scalar using NumPy.
+Return the resulting matrix with updated salaries.
+
+

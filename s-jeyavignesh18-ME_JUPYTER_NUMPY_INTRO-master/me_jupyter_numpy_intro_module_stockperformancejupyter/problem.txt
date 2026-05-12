@@ -1,0 +1,52 @@
+PROBLEM TASK - PRIMARY
+Problem Description
+As a portfolio manager, you need to calculate the overall return of your portfolio. Each stock in the portfolio has a return and a weight (percentage of the total portfolio). By computing the dot product of these two vectors, you can easily determine the portfolio's performance.
+
+Implement a function `portfolio_return` that:
+
+Accepts two lists of integers: one representing the returns of each stock in your portfolio, and the other representing the weights of each stock (as percentages).
+Computes the overall portfolio return by calculating the dot product of these two lists using the `numpy.dot()` function.
+<br>
+Function signature:
+```
+import numpy as np
+def portfolio_return(returns, weights)
+```
+<br>
+Sample Input:
+`returns`: A list of integers where each element represents the return percentage of a stock in the portfolio.
+`weights`: A list of integers where each element represents the weight (percentage) of the corresponding stock in the portfolio.
+Sample Output:
+Returns a float value representing the portfolio return as a weighted average.
+<br>
+Notes:
+Both lists `returns` and `weights` will have the same length, as each return corresponds to a stock's weight.
+The portfolio return should be returned as a floating-point number.
+<br>
+Sample Input 1:
+```
+returns = [10, 5, 8]
+weights = [50, 30, 20]
+```
+Sample Output 1:
+```
+8.1
+```
+Explanation:
+The portfolio return is calculated as:
+(10×0.50)+(5×0.30)+(8×0.20)=5+1.5+1.6=8.1%
+<br>
+Sample Input 2:
+```
+returns = [12, 7, 15, 5]
+weights = [40, 20, 30, 10]
+```
+Sample Output 2:
+```
+10.4
+```
+Explanation:
+The portfolio return is calculated as:
+(12×0.40)+(7×0.20)+(15×0.30)+(5×0.10)=4.8+1.4+4.5+0.5=10.4%
+<br>
+
