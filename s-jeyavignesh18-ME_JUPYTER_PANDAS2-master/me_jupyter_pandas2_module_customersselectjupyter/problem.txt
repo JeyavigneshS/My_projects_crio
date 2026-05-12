@@ -1,0 +1,86 @@
+PROBLEM TASK - PRIMARY
+Use Case
+Imagine you work for a customer analytics company that tracks information about customers across various cities. You need to build a function that can help you extract specific customer data from a predefined dataset of customer information.
+<br>
+Problem Description
+Implement a function select_dataframe_values that:
+
+Accepts no arguments
+Creates a Pandas DataFrame with the following sample data:
+```
+data = {
+        "Unnamed_Column_1": ["Alice", "Bob", "Charlie", "David"],
+        "Unnamed_Column_2": [250, 100, 75, 150],
+        "Unnamed_Column_3": ["New York", "Los Angeles", "Chicago", "Houston"]
+}
+```
+Returns a tuple containing the following selected values:
+The first row of the DataFrame.
+The first three rows of the DataFrame.
+The amount of the third customer.
+The last row of the DataFrame.
+<br>
+
+Implement a function filter_customers_by_city that:
+
+Accepts no arguments
+Creates a Pandas DataFrame with the following sample data:
+```
+data = {
+        "Customer Name": ["Alice", "Bob", "Charlie", "David", "Eve"],
+        "Purchase Amount": [250, 100, 75, 150, 300],
+        "City": ["New York", "Los Angeles", "Chicago", "New York", "Houston"]
+}
+```
+Returns a filtered DataFrame containing only the names and purchase amounts of customers from the New York city.
+<br>
+Notes
+For select_dataframe_values
+You need to ensure that the function uses the iloc method of the DataFrame to select the rows and specific column data as described.
+The output should be returned in a tuple.
+<br>
+For filter_customers_by_city
+You need to ensure that the function uses the loc method of the DataFrame to select the rows and specific column data as described.
+<br>
+Sample Input 1
+For select_dataframe_values
+There are no input parameters for this function as it uses a predefined dictionary as follows:
+```
+data = {
+        "Unnamed_Column_1": ["Alice", "Bob", "Charlie", "David"],
+        "Unnamed_Column_2": [250, 100, 75, 150],
+        "Unnamed_Column_3": ["New York", "Los Angeles", "Chicago", "Houston"]
+}
+```
+<br>
+Sample Output 1
+For select_dataframe_values
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+For select_dataframe_values
+The first row corresponds to Alice's data, which is selected completely.
+The first three rows return all entries for Alice, Bob, and Charlie.
+The third customer's amount refers to Charlie's data, which is 75.
+The last row corresponds to David's data.
+<br>
+Sample Input 2
+For filter_customers_by_city
+There are no input parameters for this function as it uses a predefined dictionary as follows:
+```
+data = {
+        "Customer Name": ["Alice", "Bob", "Charlie", "David", "Eve"],
+        "Purchase Amount": [250, 100, 75, 150, 300],
+        "City": ["New York", "Los Angeles", "Chicago", "New York", "Houston"]
+}
+```
+<br>
+Sample Output 2
+For filter_customers_by_city
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+For filter_customers_by_city
+Alice and David are the customers that live in New York. As per the requirement, the filtered dataframe contains only their name and purchase amount.

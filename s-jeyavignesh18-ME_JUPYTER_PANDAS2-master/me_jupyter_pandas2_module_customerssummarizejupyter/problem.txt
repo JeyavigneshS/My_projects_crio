@@ -1,0 +1,45 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail business, data analysis plays a crucial role in understanding customer behavior and sales trends. One essential task in this analysis is to create structured representations of data, such as DataFrames, to facilitate further operations like data cleaning, transformations, and visualizations.
+Problem Description
+Implement a function create_dataframe that:
+
+Accepts no arguments.
+Creates a Pandas DataFrame from a predefined dictionary containing customer data.
+Identifies missing values using `info()`.
+The function returns the created DataFrame after printing its information.
+
+Implement a function describe_customer_data that:
+
+Accepts no arguments
+Creates a Pandas DataFrame from a predefined dictionary containing customer data.
+Prints the summary statistics of the DataFrame, including count, mean, standard deviation, min, and max values for numerical columns. Use `describe()` for this.
+Returns the created DataFrame.
+
+Sample Input 1
+For create_dataframe
+There are no input parameters for this function as it uses a predefined dictionary as follows:
+```
+data = {
+        "Customer Name": ["Alice", "Bob", "Charlie", None],
+        "Age": [25, None, 30, 22],
+        "Purchase Amount": ["100", 250, 75, "300"]
+}
+```
+Sample Output 1
+For create_dataframe
+After running the test function that invokes your implemented function, you must get the following output
+
+Sample Input 2
+For describe_customer_data
+There are no input parameters for this function as it uses a predefined dictionary as follows:
+```
+data = {
+        "Customer Name": ["Alice", "Bob", "Charlie", "David", "Eve"],
+        "Purchase Amount": [100, 250, 75, 300, 150],
+        "Age": [25, 40, 30, 35, 45]
+}
+```
+Sample Output 2
+For describe_customer_data
+After running the test function that invokes your implemented function, you must get the following output

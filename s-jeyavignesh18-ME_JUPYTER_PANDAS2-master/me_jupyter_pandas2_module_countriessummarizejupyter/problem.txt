@@ -1,0 +1,130 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the context of global data analysis, organizations frequently need to analyze country-specific metrics such as population, GDP, surface area, Human Development Index (HDI), and continent classification. This data is crucial for policymakers, researchers, and economists to make informed decisions.
+<br>
+Problem Description
+Implement a function create_country_dataframe that:
+
+Creates a pandas DataFrame with the following country-related data:
+```
+{
+        'Population': [35.467, 63.951, 80.94, 60.665, 127.061, 64.511, 318.523],
+        'GDP': [
+            1785387,
+            2833687,
+            3874437,
+            2167744,
+            4602367,
+            2950039,
+            17348075
+        ],
+        'Surface Area': [
+            9984670,
+            640679,
+            357114,
+            301336,
+            377930,
+            242495,
+            9525067
+        ],
+        'HDI': [
+            0.913,
+            0.888,
+            0.916,
+            0.873,
+            0.891,
+            0.907,
+            0.915
+        ],
+        'Continent': [
+            'America',
+            'Europe',
+            'Europe',
+            'Europe',
+            'Asia',
+            'Europe',
+            'America'
+        ]
+}
+```
+The function should print the DataFrame's information using the `info()` method.
+The function should return the created DataFrame.
+<br>
+
+Implement a function describe_country_dataframe that:
+
+Accepts no arguments
+Constructs a Pandas DataFrame containing country-related data, same as create_country_dataframe
+Prints descriptive statistics of the DataFrame using `describe()`
+Returns the DataFrame for further analysis.
+<br>
+Notes
+Make sure to use the pandas library to construct the DataFrame.
+Ensure proper data indexing using country names.
+<br>
+Sample Input 1
+For create_country_dataframe
+DataFrame created from the following dictionary
+```
+{
+        'Population': [35.467, 63.951, 80.94, 60.665, 127.061, 64.511, 318.523],
+        'GDP': [
+            1785387,
+            2833687,
+            3874437,
+            2167744,
+            4602367,
+            2950039,
+            17348075
+        ],
+        'Surface Area': [
+            9984670,
+            640679,
+            357114,
+            301336,
+            377930,
+            242495,
+            9525067
+        ],
+        'HDI': [
+            0.913,
+            0.888,
+            0.916,
+            0.873,
+            0.891,
+            0.907,
+            0.915
+        ],
+        'Continent': [
+            'America',
+            'Europe',
+            'Europe',
+            'Europe',
+            'Asia',
+            'Europe',
+            'America'
+        ]
+}
+```
+<br>
+Sample Output 1
+For create_country_dataframe
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+For create_country_dataframe
+The implementation initializes the DataFrame based on predefined country-related metrics, prints its information structure, and returns the DataFrame itself for further analysis or visualization.
+<br>
+Sample Input 2
+For describe_country_dataframe
+Same as input for create_country_dataframe
+<br>
+Sample Output 1
+For describe_country_dataframe
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+For describe_country_dataframe
+The output displays the descriptive statistics of the country-related data including metrics on population, GDP, surface area, HDI, and the continent.

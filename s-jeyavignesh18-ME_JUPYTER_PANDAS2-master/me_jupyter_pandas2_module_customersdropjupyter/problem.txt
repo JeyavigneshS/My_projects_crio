@@ -1,0 +1,31 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In everyday data analysis, it is common to need to clean data by removing unnecessary or sensitive information from datasets. This is particularly the case in customer data management where certain columns may need to be omitted for privacy or regulatory reasons.
+<br>
+Problem Description
+Implement a function remove_customer_address_column that:
+
+Accepts a DataFrame df as an argument.
+Removes the column named Customer Address from the DataFrame, in-place.
+Prints and returns the modified DataFrame without the 'Customer Address' column.
+<br>
+Notes
+The 'Customer Address' column is guaranteed to be present in the DataFrame for this problem.
+The function should modify the DataFrame in place and return the updated DataFrame.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary:
+```
+{
+    "Customer Name": ["Alice", "Bob", "Charlie"],
+    "Purchase Amount": [100, 250, 75],
+    "Customer Address": ["123 St", "456 Ave", "789 Blvd"]
+}
+```
+<br>
+Sample Output 1
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The input DataFrame contains three columns, while the output DataFrame is missing the 'Customer Address' column, having been successfully removed.

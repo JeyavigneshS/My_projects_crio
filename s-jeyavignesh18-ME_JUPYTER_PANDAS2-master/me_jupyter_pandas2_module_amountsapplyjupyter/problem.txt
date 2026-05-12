@@ -1,0 +1,80 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In an online shopping platform, categorizing purchased items based on their price helps better analyze consumer spending behaviors and tailor marketing strategies accordingly.
+<br>
+Problem Description
+Implement a function categorize_purchase that:
+
+Accepts a single argument amount, which represents the purchase amount.
+Categorizes the purchase into one of the three categories: Low, Medium, or High.
+Returns the appropriate category as a string.
+<br>
+
+Implement a function apply_purchase_category that:
+
+Accepts a DataFrame df containing a column named 'Purchase Amount'
+Applies a categorization logic to the 'Purchase Amount' column to determine the Purchase Category by using categorize_purchase
+Prints and returns the modified DataFrame with an additional column named 'Purchase Category'
+<br>
+Notes
+For categorize_purchase
+A purchase amount of less than 100 should be categorized as "Low".
+A purchase amount from 100 to 200 (inclusive) should be categorized as "Medium".
+A purchase amount greater than 200 should be categorized as "High".
+<br>
+Sample Input 1
+For categorize_purchase
+50
+<br>
+Sample Output 1
+For categorize_purchase
+'Low'
+<br>
+Explanation
+For categorize_purchase
+The amount 50 is less than 100, therefore it is categorized as 'Low'.
+<br>
+Sample Input 2
+For categorize_purchase
+150
+<br>
+Sample Output 2
+For categorize_purchase
+'Medium'
+<br>
+
+Explanation
+For categorize_purchase
+The amount 150 falls between 100 and 200 (inclusive), therefore it is categorized as 'Medium'.
+<br>
+Sample Input 3
+For categorize_purchase
+250
+<br>
+Sample Output 3
+For categorize_purchase
+'High'
+<br>
+
+Explanation
+For categorize_purchase
+The amount 250 is greater than 200, therefore it is categorized as 'High'.
+<br>
+Sample Input 4
+For apply_purchase_category
+DataFrame created from the following dictionary
+```
+{
+        "Customer Name": ["Alice", "Bob", "Charlie", "David"],
+        "Purchase Amount": [100, 250, 75, 150]
+}
+```
+<br>
+Sample Output 4
+For apply_purchase_category
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+For apply_purchase_category
+Each customer’s purchases have been categorized into Easy, Medium and High categories as per the categorization criteria mentioned.

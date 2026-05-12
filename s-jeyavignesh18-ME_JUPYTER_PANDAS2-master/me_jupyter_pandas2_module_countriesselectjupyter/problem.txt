@@ -1,0 +1,140 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In this problem, you are dealing with a dataset containing various statistics about different countries. You will need to extract specific information based on their positions in the dataset and format it accordingly.
+<br>
+Problem Description
+Implement a function select_country_data that:
+
+Accepts no arguments
+Creates a pandas DataFrame with the following country-related data:
+```
+{
+        'Population': [35.467, 63.951, 80.94, 60.665, 127.061, 64.511, 318.523],
+        'GDP': [
+            1785387,
+            2833687,
+            3874437,
+            2167744,
+            4602367,
+            2950039,
+            17348075
+        ],
+        'Surface Area': [
+            9984670,
+            640679,
+            357114,
+            301336,
+            377930,
+            242495,
+            9525067
+        ],
+        'HDI': [
+            0.913,
+            0.888,
+            0.916,
+            0.873,
+            0.891,
+            0.907,
+            0.915
+        ],
+        'Continent': [
+            'America',
+            'Europe',
+            'Europe',
+            'Europe',
+            'Asia',
+            'Europe',
+            'America'
+        ]
+}
+```
+The DataFrame should be indexed by country names.
+The function should print and return the following data:
+The first (0th index) country's data.
+The last country's data.
+Data of the first (0th index) country, second (1st index) country, and the last country together.
+Data of the second (1st index) and third countries together.
+<br>
+
+Implement a function filter_country_data that:
+
+Accepts no arguments
+Creates a Pandas DataFrame with country-related data just like select_country_data
+Filters the population of countries from France to Italy (inclusive) based on the Population from that DataFrame.
+Prints and returns the filtered DataFrame.
+<br>
+Notes
+For select_country_data
+Ensure to utilize the index positions for returning data using iloc.
+For filter_country_data
+The indices of the DataFrame will be the country names.
+Ensure to utilize the country names for returning data using loc.
+<br>
+Sample Input 1
+For select_country_data
+DataFrame created from the following dictionary
+```
+{
+        'Population': [35.467, 63.951, 80.94, 60.665, 127.061, 64.511, 318.523],
+        'GDP': [
+            1785387,
+            2833687,
+            3874437,
+            2167744,
+            4602367,
+            2950039,
+            17348075
+        ],
+        'Surface Area': [
+            9984670,
+            640679,
+            357114,
+            301336,
+            377930,
+            242495,
+            9525067
+        ],
+        'HDI': [
+            0.913,
+            0.888,
+            0.916,
+            0.873,
+            0.891,
+            0.907,
+            0.915
+        ],
+        'Continent': [
+            'America',
+            'Europe',
+            'Europe',
+            'Europe',
+            'Asia',
+            'Europe',
+            'America'
+        ]
+}
+```
+<br>
+Sample Output 1
+For select_country_data
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The output above provides:
+The data for Canada (the first i.e. 0th index country)
+The data for the United States (the last country)
+The data for Canada, France, and the United States together
+The data for France and Germany together
+<br>
+Sample Input 2
+For filter_country_data
+Same as input for select_country_data
+<br>
+Sample Output 2
+For select_country_data
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The output above represents the populations of countries from France to Italy (inclusive) extracted from the built DataFrame.

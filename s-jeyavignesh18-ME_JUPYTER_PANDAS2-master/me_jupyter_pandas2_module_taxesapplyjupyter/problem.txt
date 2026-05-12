@@ -1,0 +1,67 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In retail analytics, it is crucial to compute the total price for items purchased after including applicable taxes. A retail company has a dataset of transactions consisting of purchase amounts, and it wants to quickly compute the total price for each transaction after applying a tax rate. This computation should be performed on a DataFrame containing the data, making it easy to analyze and report on sales.
+<br>
+Problem Description
+Implement a function calculate_total_price that:
+
+Accepts a single parameter amount representing the purchase amount (can be an integer or a float).
+Calculates the total price after applying tax based on the following rules:
+If the amount is less than 100, apply a tax rate of 5%.
+If the amount is between 100 and 200 (inclusive), apply a tax rate of 10%.
+If the amount is greater than 200, apply a tax rate of 15%.
+Returns the total price as a float.
+<br>
+Implement a function apply_total_price_tax that:
+
+Accepts a single argument `df`, a pandas DataFrame containing a 'Purchase Amount' column.
+Applies a tax rate on each purchase amount using `apply()` and calculate_total_price()
+Prints and returns a new DataFrame with an added Total Price (After Tax) column which reflects these calculations.
+<br>
+Sample Input 1
+For calculate_total_price
+99
+<br>
+Sample Output 1
+103.95
+<br>
+Explanation
+Since the amount is less than 100, the tax rate applied is 5%, leading to a total of 99 + (99 * 0.05) = 103.95.
+<br>
+Sample Input 2
+For calculate_total_price
+150
+<br>
+Sample Output 2
+165.0
+<br>
+Explanation
+The amount is between 100 and 200, so a tax rate of 10% applies, resulting in a total of 150 + (150 * 0.10) = 165.0.
+<br>
+Sample Input 3
+For calculate_total_price
+250
+<br>
+Sample Output 3
+287.5
+<br>
+Explanation
+Since the amount exceeds 200, a tax rate of 15% is used, giving a total of 250 + (250 * 0.15) = 287.5.
+<br>
+Sample Input 4
+For apply_total_price_tax
+DataFrame created from the following dictionary
+```
+{
+        "Customer Name": ["Alice", "Bob", "Charlie", "David"],
+        "Purchase Amount": [250, 100, 75, 150]
+}
+```
+<br>
+Sample Output 4
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The purchase amounts for each customer have been updated by adding appropriate taxes as per criteria defined in calculate_total_price and have been updated in the new column `Total Price (After Tax)`.
+<br>

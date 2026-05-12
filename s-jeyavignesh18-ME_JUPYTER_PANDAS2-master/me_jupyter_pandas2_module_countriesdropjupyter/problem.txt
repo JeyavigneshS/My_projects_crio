@@ -1,0 +1,62 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a data analysis project, we often encounter datasets that contain unnecessary or irrelevant columns. Efficiently managing the data by removing unneeded columns is crucial to ensure that the data processing workflow remains clean and efficient.
+<br>
+Problem Description
+Implement a function remove_population_hdi_columns that:
+
+Accepts a single argument, df, which is a pandas DataFrame containing Countries data.
+Removes the columns labeled Population and HDI from the DataFrame, in-place.
+Prints and returns the updated DataFrame.
+<br>
+Sample Input 1
+DataFrame created as follows will be passed as an argument
+```
+df = pd.DataFrame({
+        'Population': [35.467, 63.951, 80.94, 60.665, 127.061, 64.511, 318.523],
+        'GDP': [
+            1785387,
+            2833687,
+            3874437,
+            2167744,
+            4602367,
+            2950039,
+            17348075
+        ],
+        'Surface Area': [
+            9984670,
+            640679,
+            357114,
+            301336,
+            377930,
+            242495,
+            9525067
+        ],
+        'HDI': [
+            0.913,
+            0.888,
+            0.916,
+            0.873,
+            0.891,
+            0.907,
+            0.915
+        ],
+        'Continent': [
+            'America',
+            'Europe',
+            'Europe',
+            'Europe',
+            'Asia',
+            'Europe',
+            'America'
+        ]
+}, columns=['Population', 'GDP', 'Surface Area', 'HDI', 'Continent'])
+```
+<br>
+Sample Output 1
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The 'Population' and the 'HDI' columns have been removed from the original DataFrame.
+<br>

@@ -1,0 +1,39 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail application, it is essential to analyze sales data effectively to make informed business decisions. A common requirement is sorting the purchase data based on different criteria to identify high-value customers and trends.
+<br>
+Problem Description
+Implement a function sort_dataframe that:
+
+Accepts a DataFrame containing purchase data with the columns "Purchase Amount", "Customer Name", and "Customer Type".
+
+Sorts the DataFrame in three specified ways:
+
+By Purchase Amount (from highest to lowest).
+By Customer Name (in alphabetical order).
+By Customer Type (where "Regular" customers come before "VIP" customers), then by Purchase Amount (from highest to lowest). If "Customer Type" is not present in the DataFrame, return None for this sorting.
+
+Prints all the three DataFrames and returns a tuple containing three DataFrames sorted in these three different ways.
+<br>
+Notes
+If the DataFrame does not include the "Customer Type" column, the third returned DataFrame should be None.
+The DataFrame should be modified only for sorting; the original DataFrame must remain unchanged.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary:
+```
+{
+        "Customer Name": ["Alice", "Bob", "Charlie", "David"],
+        "Purchase Amount": [250, 100, 75, 150],
+        "Customer Type": ["Regular", "VIP", "Regular", "VIP"]
+}
+```
+<br>
+Sample Output 1
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The first DataFrame is sorted by "Purchase Amount" in descending order.
+The second DataFrame is sorted by "Customer Name" in alphabetical order.
+The third DataFrame is sorted first by "Customer Type" (Regular before VIP) and then by "Purchase Amount" in descending order.

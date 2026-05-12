@@ -1,0 +1,40 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail scenario, companies often analyze purchase data to gain insights into customer behavior. By sorting the purchase data in various ways, businesses can identify trends, make strategic decisions, and improve customer satisfaction.
+<br>
+Problem Description
+Implement a function sort_dataframe that:
+
+Accepts a single DataFrame `df`, containing purchase data with columns "Purchase Amount", "Customer Name", "City", and "Purchase Date".
+Performs the following sorting actions:
+Sorts by Purchase Amount in descending order (highest to lowest).
+Sorts by Customer Name in alphabetical order.
+Sorts by City in alphabetical order and then by Purchase Amount in descending order.
+Sorts by Purchase Date in ascending order (oldest to newest).
+Prints each of the ]DataFrames in the same sequence as mentioned above.
+Returns a tuple of four DataFrames, each corresponding to one of the sorting criteria described above.
+<br>
+Notes
+Ensure that the returned DataFrames maintain their order as specified.
+<br>
+Sample Input 1
+DataFrame created from the following dictionary
+```
+{
+        "Customer Name": ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace"],
+        "Purchase Amount": [120, 250, 75, 300, 150, 200, 100],
+        "City": ["New York", "Los Angeles", "Chicago", "Houston", "New York", "Chicago", "Los Angeles"],
+        "Purchase Date": ["2024-03-10", "2024-02-20", "2024-01-15", "2024-03-05", "2024-02-28", "2024-01-10", "2024-02-25"]
+}
+```
+<br>
+Sample Output 1
+After running the test function that invokes your implemented function, you must get the following output
+
+<br>
+Explanation
+The first DataFrame presents the purchases sorted by "Purchase Amount" from highest to lowest.
+The second DataFrame shows the purchases sorted by "Customer Name" in alphabetical order.
+The third DataFrame is sorted first by "City", and within each city, by "Purchase Amount" from highest to lowest.
+The fourth DataFrame presents the purchases sorted by "Purchase Date" from the oldest to the newest.
+<br>
