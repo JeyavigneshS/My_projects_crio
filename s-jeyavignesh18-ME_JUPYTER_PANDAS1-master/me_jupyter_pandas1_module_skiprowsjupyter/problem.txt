@@ -1,0 +1,44 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a data analysis process, it's common to load data files in various formats while selectively choosing which rows to include. In particular, we might need to skip specific rows that contain metadata or unwanted information.
+<br>
+Problem Description
+Implement a function load_exam_review_skiprows that:
+
+Loads exam review data from a CSV file using the custom separator > and skips the first 2 rows.
+Returns the loaded data as a DataFrame.
+<br>
+
+Implement a function load_exam_review_skip_specific_rows that:
+
+Loads exam review data from a CSV file.
+The data should use a custom separator '>'.
+The function must skip specific rows (1 and 3) during loading the data.
+The function should return a DataFrame containing the loaded exam review data.
+<br>
+Sample Input 1
+For load_exam_review_skiprows
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+For load_exam_review_skiprows
+The returned dataframe must be as follows
+
+<br>
+Explanation
+For load_exam_review_skiprows
+The output is a DataFrame containing the exam reviews data separated using custom delimiter `>` and first 2 rows skipped.
+<br>
+Sample Input 2
+For load_exam_review_skip_specific_rows
+You must import the dataset from the following URL.
+<br>
+Sample Output 2
+For load_exam_review_skip_specific_rows
+The returned dataframe must be as follows
+
+<br>
+Explanation
+For load_exam_review_skip_specific_rows
+The output is a DataFrame containing the exam reviews data separated using custom delimiter `>` and the rows 1 and 3 skipped.
+

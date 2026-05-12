@@ -1,0 +1,30 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the world of superhero comics, data about various characters can be invaluable for analysis, sorting, and visualization. In our scenario, we will create a structured collection of Marvel characters that includes their names, genders, and debut years.
+Problem Description
+Implement a function create_marvel_dataframe that:
+
+Initializes a list of Marvel characters, where each character is represented as a list containing the character's name, gender, and the year they made their debut.
+Converts this list into a pandas DataFrame with appropriate column headers: "Name", "Gender", and "Debut Year".
+Returns the resulting DataFrame.
+Notes
+Ensure that the DataFrame has the correct structure and includes all characters listed.
+Use the pandas library to create the DataFrame.
+Sample Input 1
+You must create the dataframe from the following list:
+```
+marvel_data = [
+        ['Spider-Man', 'male', 1962],
+        ['Captain America', 'male', 1941],
+        ['Iron Man', 'male', 1963],
+        ['Thor', 'male', 1963],
+        ['Hulk', 'male', 1962],
+        ['Hawkeye', 'male', 1964],
+        ['Doctor Strange', 'male', 1963],
+        ['Scarlet Witch', 'female', 1964],
+        ['Black Widow', 'female', 1964],
+        ['Vision', 'male', 1968]
+    ]
+```
+Sample Output 1
+Here’s an image showing the required dataframe

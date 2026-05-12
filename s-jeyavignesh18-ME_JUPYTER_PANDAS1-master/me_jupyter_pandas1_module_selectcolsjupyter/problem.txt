@@ -1,0 +1,40 @@
+PROBLEM TASK - PRIMARY
+Use Case
+Imagine you are working with a large educational dataset that contains information about students and their exam performance. You need to extract specific details from this dataset for analysis, such as students’ first names, last names, and their ages. Being able to load relevant portions of this data quickly and effectively is critical for providing insights and aiding in decision-making.
+Problem Description
+Implement a function load_exam_review_selected_columns that:
+
+Loads exam review data from a CSV file using a custom separator >
+Selects specific columns: first_name, last_name, age
+Returns a DataFrame containing the selected columns from the exam review data.
+
+Implement a function load_exam_review_selected_columns_by_index that:
+
+Reads exam review data from a CSV file using a custom separator >
+Selects specific columns of interest based on their indices, which are 0, 1, 2
+Returns the resulting data in a structured format suitable for analysis
+Sample Input 1
+For load_exam_review_selected_columns
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+For load_exam_review_selected_columns
+The returned dataframe must be as follows(showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_exam_review_selected_columns
+The output will be a Pandas DataFrame containing only the columns: 'first_name', 'last_name', and 'age' extracted from the CSV file.
+<br>
+Sample Input 2
+For load_exam_review_selected_columns_by_index
+You must import the dataset from the following URL.
+<br>
+Sample Output 2
+For load_exam_review_selected_columns_by_index
+The returned dataframe must be as follows(showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_exam_review_selected_columns_by_index
+The output will be a Pandas DataFrame containing only the data from columns indexed at 0, 1, and 2 of the CSV file.

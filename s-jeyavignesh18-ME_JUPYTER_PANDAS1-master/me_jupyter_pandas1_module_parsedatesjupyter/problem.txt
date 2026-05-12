@@ -1,0 +1,20 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the world of cryptocurrencies, analyzing market price data is crucial for traders and analysts. They often need to load and manipulate time-series data to understand price movements over specific time frames.
+Problem Description
+Implement a function load_btc_market_price_with_parsed_dates that:
+
+Loads Bitcoin market price data from a specified CSV file.
+Ensures that the Timestamp column i.e. the 0th column is parsed as datetime using `parse_dates`.
+Returns a DataFrame containing the BTC market price data.
+Sample Input 1
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+The output is a DataFrame containing the BTC market price data with the Timestamp column having the date data parsed.
+
+<br>

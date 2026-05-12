@@ -1,0 +1,73 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a data-driven environment, businesses often need to load product data from a file to analyze and manage inventory. This problem simulates the task of transferring data from an external source (Excel) to a structured format for further processing.
+<br>
+Problem Description
+Implement a function load_products_excel that:
+
+Accepts no arguments
+Reads the data from an Excel file and returns a DataFrame containing the product data.
+<br>
+
+Implement a function load_products_excel_with_index that:
+
+Accepts no arguments
+Loads product data from the 'Products' sheet of a specified Excel file, using product_id as the index column.
+Returns a DataFrame containing the product data.
+<br>
+
+Implement a function load_all_sheets that:
+
+Loads multiple sheets i.e. the `Products` and the `Merchants` sheets from a specified Excel file.
+Returns a dictionary such that the keys of the dictionary should be the names of the sheets, and the values should be the corresponding DataFrames.
+<br>
+Sample Input 1
+For load_products_excel
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+For load_products_excel
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_products_excel
+The output is a DataFrame containing the products data.
+<br>
+Sample Input 2
+For load_products_excel_with_index
+You must import the dataset from the following URL.
+<br>
+Sample Output 2
+For load_products_excel_with_index
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_products_excel_with_index
+The output is a DataFrame containing the products data having the product_id as the index column.
+<br>
+Sample Input 3
+For load_all_sheets
+You must import the dataset from the following URL.
+<br>
+Sample Output 3
+For load_all_sheets
+The returned dictionary will be of the following format:
+```
+{
+
+    'Products': <DataFrame with Products data>,
+
+    'Merchants': <DataFrame with Merchants data>
+
+}
+```
+The Products dataframe must be as follows (showing just the initial 5 rows here)
+
+The Merchants dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_all_sheets
+The function will read the sheets from the specified Excel file and return a dictionary where each key is the name of a sheet and the corresponding value is a DataFrame containing the data from that sheet.

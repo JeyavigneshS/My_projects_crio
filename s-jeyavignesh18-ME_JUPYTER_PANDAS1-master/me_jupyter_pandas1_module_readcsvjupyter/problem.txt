@@ -1,0 +1,63 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the world of cryptocurrency, investors and traders often seek historical pricing data for Bitcoin (BTC) to analyze trends and make informed decisions regarding buying or selling. In order to facilitate this analysis, it's necessary to load this data from a CSV file efficiently.
+<br>
+Problem Description
+Implement a function load_btc_market_price that:
+
+Accepts no arguments
+Loads BTC market price data from a CSV file
+Returns a DataFrame containing the loaded data
+<br>
+
+Implement a function load_btc_market_price_no_header that:
+
+Accepts no arguments
+Loads BTC market price data from a CSV file.
+Returns a DataFrame containing the loaded data, but without any header as the default header is incorrect as seen in the output of load_btc_market_price
+<br>
+
+Implement a function load_btc_market_price_with_names that:
+
+Accepts no arguments
+Loads BTC market price data from a CSV file.
+The function should return a DataFrame containing the Bitcoin market price data with named columns Timestamp and Price.
+<br>
+Sample Input 1
+For load_btc_market_price
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+For load_btc_market_price
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_btc_market_price
+The output is a DataFrame containing the BTC market price data.
+<br>
+Sample Input 2
+For load_btc_market_price_no_header
+You must import the dataset from the following URL.
+<br>
+Sample Output 2
+For load_btc_market_price_no_header
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_btc_market_price_no_header
+The output is a DataFrame containing the BTC market price data without headers i.e. without the first row being marked as the default header incorrectly.
+<br>
+Sample Input 3
+For load_btc_market_price_with_names
+You must import the dataset from the following URL.
+<br>
+Sample Output 3
+For load_btc_market_price_with_names
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+For load_btc_market_price_with_names
+The output is a DataFrame containing the BTC market price data and custom column names.

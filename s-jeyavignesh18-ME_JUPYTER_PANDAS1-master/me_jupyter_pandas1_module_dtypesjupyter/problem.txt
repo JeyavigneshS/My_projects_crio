@@ -1,0 +1,83 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a data-driven world, it is common to collect information in a structured format like DataFrames. The task of creating a sample DataFrame can help in understanding the representation of tabular data and facilitate further data manipulation and analysis.
+<br>
+Problem Description
+Implement a function create_sample_dataframe that:
+
+Creates a DataFrame `df` containing sample data from a dictionary
+```
+{
+        "Name": ["Alice", "Bob", "Charlie"],
+        "Age": ["25", "30", "35"],
+        "Grade": [85, 90, 75],
+        "City": ["New York", "Boston", "Chicago"]
+}
+```
+The function should use `dtypes` and print the information related to the datatypes present in the dataframe.
+The function should return the constructed DataFrame.
+<br>
+
+Implement a function create_and_analyze_dataframe that:
+
+Creates a DataFrame `df` representing a group of students with their name, age, grade, and city, as per the following dictionary
+```
+{
+        "Name": ["Alice", "Bob", "Charlie"],
+        "Age": ["25", "30", "35"],  # Strings
+        "Grade": [85, 90, 75],      # Integers
+        "City": ["New York", "Boston", "Chicago"]
+}
+```
+Converts the 'Age' column from String to `int` type by using `astype`.
+Computes the average age `avg_age` of the students.
+Returns a tuple containing the DataFrame and the average age.
+<br>
+Sample Input 1
+For create_sample_dataframe
+You must import the dataframe by using the dictionary
+```
+{
+        "Name": ["Alice", "Bob", "Charlie"],
+        "Age": ["25", "30", "35"],
+        "Grade": [85, 90, 75],
+        "City": ["New York", "Boston", "Chicago"]
+}
+```	
+<br>
+Sample Output 1
+For create_sample_dataframe
+The returned dataframe must be as follows
+
+The datatypes must be printed in the function as follows
+
+<br>
+Explanation
+For create_sample_dataframe
+The function returns the dataframe as shown above, and it must also print the datatypes using the `dtypes` property of Pandas DataFrame.
+<br>
+Sample Input 2
+For create_and_analyze_dataframe
+You must import the dataframe by using the dictionary
+```
+{
+        "Name": ["Alice", "Bob", "Charlie"],
+        "Age": ["25", "30", "35"],
+        "Grade": [85, 90, 75],
+        "City": ["New York", "Boston", "Chicago"]
+}
+```	
+<br>
+Sample Output 2
+For create_and_analyze_dataframe
+The returned tuple must have the dataframe as follows
+
+The returned tuple must have the average as 30.0
+<br>
+Explanation
+For create_and_analyze_dataframe
+The returned tuple must have the dataframe as follows
+
+After updating the datatype of teh Age column, the datatypes are as follows
+
+The returned tuple must have the average as 30.0

@@ -1,0 +1,142 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail business, keeping track of sales data on a monthly basis is crucial for understanding trends and performance. Having this data organized and easily accessible allows businesses to make informed decisions.
+<br>
+Problem Description
+Implement a function create_monthly_sales_series that:
+
+Creates and returns a Pandas Series containing monthly sales data.
+The sales data should represent sales figures for the first six months of the year.
+Make sure to use appropriate indexing for the Series.
+```
+["January", "February", "March", "April", "May", "June"]
+```
+The function should return a Series indexed by month, with the sales values mentioned in the below array:
+```
+[200, 300, 250, 400, 350, 500]
+```
+<br>
+
+Implement a function get_sales_for_month that:
+
+Accepts an argument sales, a pandas Series containing monthly sales data indexed by month names.
+Returns the sales value for the month of March.
+<br>
+
+Implement a function update_sales_for_month that:
+
+Accepts an argument sales, a pandas Series containing monthly sales data indexed by month names.
+Updates the sales amount for the month of June to a fixed amount of 550.
+Returns the updated sales series.
+<br>
+
+Implement a function increase_sales_by_percentage that:
+
+Accepts a series of monthly sales data as input
+Increases each sales figure by 10%
+And returns the updated series of sales data
+<br>
+Sample Input 1
+For create_monthly_sales_series
+You must create the series having sales data as per the below array:
+```
+[200, 300, 250, 400, 350, 500]
+```
+And mention indices as follows:
+```
+["January", "February", "March", "April", "May", "June"]
+```
+<br>
+Sample Output 1
+For create_monthly_sales_series
+You must get the series created as follows:
+
+<br>
+Explanation
+For create_monthly_sales_series
+The output is a Pandas Series that shows sales figures indexed by month for the first half of the year. Each month corresponds to its respective sales data.
+<br>
+Sample Input 2
+For get_sales_for_month
+You’ll get a series data as input of similar format as below:
+```
+sales = pd.Series({
+
+    "January": 1500,
+
+    "February": 2000,
+
+    "March": 2500,
+
+    "April": 3000
+
+})
+```
+<br>
+Sample Output 2
+For get_sales_for_month
+2500
+<br>
+Explanation
+For get_sales_for_month
+The function should return 2500, which is the sales figure for March.
+<br>
+Sample Input 3
+For update_sales_for_month
+You’ll get a series data as input of similar format as below:
+```
+sales = pd.Series({
+
+    "January": 200,
+
+    "February": 300,
+
+    "March": 250,
+
+    "April": 400,
+
+    "May": 350,
+
+    "June": 500
+
+})
+```
+<br>
+Sample Output 3
+For update_sales_for_month
+The updated series will be as follows:
+
+<br>
+Explanation
+For update_sales_for_month
+The value for June has been updated from 500 to 550 while all other months remain unchanged.
+<br>
+Sample Input 4
+For increase_sales_by_percentage
+You’ll get a series data as input of similar format as below:
+```
+sales = pd.Series({
+
+    "January": 200,
+
+    "February": 300,
+
+    "March": 250,
+
+    "April": 400,
+
+    "May": 350,
+
+    "June": 500
+
+})
+```
+<br>
+Sample Output 4
+For increase_sales_by_percentage
+The updated series will be as follows:
+
+<br>
+Explanation
+For increase_sales_by_percentage
+The output represents the original sales increased by 10%. Each value in the input series has been multiplied by 1.10, reflecting the intended sales increase.

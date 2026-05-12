@@ -1,0 +1,17 @@
+PROBLEM TASK - PRIMARY
+Use Case
+Consider a cryptocurrency trading platform that tracks Bitcoin market prices over time. The platform needs to efficiently retrieve and analyze historical market price data from a CSV file to help users track Bitcoin's performance.
+Problem Description
+Implement a function btc_market_price_shape() that:
+
+Loads Bitcoin market price data from a CSV file.
+Prints the shape (number of rows and columns) of the loaded data by using the `shape` property of the dataframe.
+Returns the dataframe in which the dataframe is loaded.
+Sample Input 1
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+Make sure you have printed the shape of the dataframe in the function, and have returned the dataframe from the function.
+<br>
+Explanation
+The output is a DataFrame containing the BTC market price data with the shape (364, 2).

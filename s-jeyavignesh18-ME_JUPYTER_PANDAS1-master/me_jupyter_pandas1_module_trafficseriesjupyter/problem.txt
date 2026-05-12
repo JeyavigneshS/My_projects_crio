@@ -1,0 +1,34 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In this problem, you are tasked with managing website traffic data for a company. The website has been monitored over several months, and now you need to analyze and update this data to better understand the visitor trends. You'll be working with this data to identify specific months' traffic and adjust it based on recent updates, simulating a real-world scenario of data management and analysis.
+Problem Description
+Implement a function create_and_modify_website_traffic() that:
+
+Creates a dataframe of website traffic for the first half of the year (January to June) represented in thousands of visitors.
+Extracts the number of visitors for March.
+Updates the number of visitors for June to a new value.
+Applies a 5% increase to all monthly visitor counts.
+Returns the updated dataframe, along with specific website traffic data.
+
+The function should return:
+
+A tuple containing:
+The original traffic dataset
+The visitor count for March
+The boosted traffic dataset with a 5% increase applied.
+Notes
+Make sure to maintain the order of months in the output dataset.
+The values representing website visitors are in thousands, so the output should reflect that.
+Remember to account for the data type of the returned values, ensuring they are all in a consistent format.
+Sample Input 1
+You must use 
+
+Sample Output 1
+Expected Output is as mentioned below:
+
+
+Explanation
+The first entry in the tuple is the original dataset representing website traffic for January to June.
+The second entry is the specific traffic for March, which is 58 (thousands of visitors).
+The third is the updated dataset with the modified June value of 100 (previously 95).
+The last entry is the boosted dataset with a 5% increase applied to all monthly traffic figures.

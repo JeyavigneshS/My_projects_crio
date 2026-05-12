@@ -1,0 +1,20 @@
+PROBLEM TASK - PRIMARY
+Use Case
+Imagine you are developing a learning management system that needs to analyze student exam reviews to provide insights into student performance trends. To do this, you need to load the exam review data from a CSV file, which is formatted with a custom separator.
+<br>
+Problem Description
+Implement a function load_exam_review() that:
+
+Accepts no arguments
+Performs the action of loading exam review data from a CSV file with a custom separator >
+And returns the output df containing the loaded data as a DataFrame.
+<br>
+Sample Input 1
+You must import the dataset from the following URL.
+<br>
+Sample Output 1
+The returned dataframe must be as follows (showing just the initial 5 rows here)
+
+<br>
+Explanation
+The output is a DataFrame containing the exam reviews data separated using custom delimiter `>`.

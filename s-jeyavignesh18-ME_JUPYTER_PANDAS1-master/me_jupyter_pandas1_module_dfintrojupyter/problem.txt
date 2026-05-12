@@ -1,0 +1,58 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail management system, it is essential to monitor product details such as the name, price, and available quantity of items. Creating a structured representation of product information can help manage inventory efficiently. Also, to understand your store's performance better, you need to calculate the total value of each product in your inventory.
+<br>
+Problem Description
+Implement a function create_product_dataframe that:
+
+Creates and initializes a DataFrame using a dictionary containing details about different products including their names, prices, and quantities.
+Returns the resulting DataFrame.
+<br>
+
+Implement a function calculate_total_value that:
+
+Accepts a DataFrame containing product data with the columns "Price" and "Quantity".
+Calculates the total value for each product by multiplying its price by the quantity.
+Returns the modified DataFrame with an additional column named "Total Value".
+<br>
+Notes
+For create_product_dataframe
+The DataFrame should include the following columns: "Product", "Price", and "Quantity".
+The product data is predefined and should contain four entries: "Laptop", "Mouse", "Keyboard", and "Monitor" with their respective prices and quantities.
+<br>
+For calculate_total_value
+The returned DataFrame should maintain the original data alongside the new "Total Value" column.
+<br>
+Sample Input 1
+For create_product_dataframe
+You must use the following dictionary and build the dataframe from it:
+```
+data = {
+        "Product": ["Laptop", "Mouse", "Keyboard", "Monitor"],
+        "Price": [1000, 25, 75, 200],
+        "Quantity": [5, 50, 30, 10]
+    }
+```
+<br>
+Sample Output 1
+For create_product_dataframe
+The dataframe must be created as follows:
+ 
+<br>
+
+Sample Input 2
+For calculate_total_value
+The input would be the product dataframe created by create_product_dataframe
+<br>
+Sample Output 2
+For calculate_total_value
+The output dataframe must be as follows:
+
+<br>
+Explanation
+The output DataFrame should include the total value for each product calculated as follows:
+
+Total Value for Product A: 10 * 1 = 10
+Total Value for Product B: 20 * 2 = 40
+Total Value for Product C: 30 * 3 = 90
+<br>
