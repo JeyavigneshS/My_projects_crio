@@ -1,0 +1,36 @@
+PROBLEM TASK - PRIMARY
+Use Case
+You work as a data analyst in a retail company, and you are tasked with preparing the customer purchase data for analysis. The raw data is stored in a CSV file, and you'll need to clean and structure it appropriately to derive meaningful insights.
+Problem Description
+Implement a function clean_customer_data that:
+
+Accepts a string file_path representing the path to a CSV file containing customer purchase data.
+Loads the data into a Pandas DataFrame.
+Converts the date_of_purchase column to a datetime format.
+Standardizes the column names by converting them to lowercase and replacing any spaces with underscores.
+Identifies and removes duplicate customer records from the DataFrame.
+Returns the cleaned DataFrame.
+Notes
+Ensure that the date_of_purchase column exists in the data before attempting to convert it.
+When standardizing column names, make sure not to alter the exact underlying data.
+The function should handle errors gracefully if the file path is incorrect or if the data is not in the expected format.
+Sample Inputs and Outputs
+Input
+
+file_path = "https://gitlab.crio.do/root/me_jupyter_numpy_pandas_interview_prep_datasets/-/raw/master/customer_data.csv"
+
+Output
+
+
+Checklist
+Approach Level 1:
+Load the CSV data into a DataFrame.
+Convert the date_of_purchase column to a datetime format.
+Standardize column names by converting them to lowercase and replacing spaces with underscores.
+Remove any duplicate customer records.
+Approach Level 2:
+Use the Pandas read_csv method to load the data from the specified file path.
+Use the to_datetime function to convert the date_of_purchase column into a datetime object.
+Apply string methods to the DataFrame's column names for standardization.
+Finally, use the drop_duplicates method to eliminate any duplicate rows in the DataFrame.
+

@@ -1,0 +1,63 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In a retail business, understanding product sales is crucial for inventory management and marketing strategies. Analyzing transaction data allows businesses to identify their best-performing products, understand their customer base, and filter out transactions based on sales performance. This insight can help drive decision-making and improve overall profitability.
+Problem Description
+Implement a function analyze_sales_data that:
+
+Accepts a list of dictionaries representing sales transactions. Each dictionary contains keys "Product", "Sales", and "Customer_ID".
+Performs the following actions:
+Calculate the total sales amount for each product.
+Identify the top 3 best-selling products based on total sales.
+Count the total number of unique customers.
+Filter and return the transactions where sales are greater than the average sales.
+
+The function should return a dictionary with the following keys:
+
+"total_sales_per_product": A dictionary with products as keys and total sales as values.
+"top_3_products": A list of the top 3 best-selling products.
+"unique_customer_count": An integer representing the total number of unique customers.
+"filtered_transactions": A list of transactions where sales are greater than the average sales.
+Notes
+Consider handling empty datasets gracefully.
+Ensure the output is in the expected format.
+Sample Inputs and Outputs
+Input
+
+Sample Input URL
+Sample Output
+
+```
+{
+
+    "total_sales_per_product": {"A": 250, "B": 450, "C": 300},
+
+    "top_3_products": ["B", "C", "A"],
+
+    "unique_customer_count": 4,
+
+    "filtered_transactions": [
+
+        {"Product": "B", "Sales": 200, "Customer_ID": 2},
+
+        {"Product": "B", "Sales": 250, "Customer_ID": 4},
+
+        {"Product": "C", "Sales": 300, "Customer_ID": 1}
+
+    ]
+
+}
+```
+
+The output shows the calculated total sales for each product, the top three products sorted by total sales, the count of unique customers, and the filtered transactions with sales greater than the average.
+Checklist
+Approach Level 1:
+For total sales per product, group sales data by product and sum the sales amounts. This gives an overview of which products are performing well.
+To find the best-selling products, sort the total sales in descending order and retrieve the top three entries.
+Count unique customers by using the distinct count functionality on customer IDs.
+Calculate the average sales and filter out transactions to list those exceeding this average.
+Approach Level 2:
+Create an empty dictionary for total sales and iterate through each transaction. For each product, keep a running total of sales amounts.
+Sort this dictionary by sales in descending order and store the top three keys (products) for the final output.
+Use a set to track unique customer IDs while iterating through the transactions.
+Calculate the average sales by summing all sales amounts and dividing by the total number of transactions. Use this average to filter the original list of transactions, returning those with sales above this threshold.
+

@@ -1,0 +1,34 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the realm of data analysis, it's common to encounter datasets with missing or inaccurate information. This often happens in sales data, where certain values might not be recorded due to various reasons. Addressing these missing values effectively is crucial to ensure the data is reliable and can be used for decision-making and forecasting.
+Problem Description
+Implement a function clean_sales_data that:
+
+Accepts a pandas DataFrame containing sales data.
+Identifies and processes columns with missing values according to specified criteria:
+Fills missing values in the "Revenue" column with the mean revenue.
+Replaces occurrences of "Unknown" in the "Region" column with "Not Specified".
+Drops rows where the "Product" column is missing.
+And returns the cleaned DataFrame.
+Notes
+Ensure that the input DataFrame has columns named "Revenue", "Region", and "Product".
+The mean revenue should be calculated only from the non-missing values in the Revenue column.
+Sample Inputs and Outputs
+# Input
+
+Sample Input URL
+
+# Output
+
+    
+The output DataFrame shows that:
+
+The missing Revenue value has been filled with the mean (1750.0).
+"Unknown" in the Region column has been replaced with "Not Specified".
+The row with the missing Product has been dropped.
+Checklist
+Approach Level 1:
+To clean the dataset, identify which columns contain missing values and determine the appropriate action for each based on the requirements. Using statistical functions like mean, we can handle the missing revenue values, while categorical replacements can help standardize regions. Finally, removing rows with critical missing information ensures the dataset remains useful for analysis.
+Approach Level 2:
+First, find the mean of the Revenue column. Then, fill the missing values in the Revenue column with this mean. Next, replace all instances of "Unknown" in the Region column with "Not Specified". Finally, remove any rows where the Product column has missing data. The cleaned data should then be returned.
+

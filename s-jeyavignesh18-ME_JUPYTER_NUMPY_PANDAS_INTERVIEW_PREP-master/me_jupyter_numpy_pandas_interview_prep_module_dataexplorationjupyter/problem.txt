@@ -1,0 +1,38 @@
+PROBLEM TASK - PRIMARY
+Use Case
+In the modern workplace, analyzing employee salaries is crucial for understanding compensation trends, evaluating pay equity, and making informed hiring decisions. For companies that want to ensure they attract and retain talent, a comprehensive analysis of salary data can provide valuable insights.
+Problem Description
+Implement a function analyze_employee_salaries that:
+
+Accepts a dataset of employee salaries as input (represented as a CSV file).
+Displays the top 5 highest-paid employees.
+Computes the average salary of employees in the "Data Analyst" role.
+Selects the employees who earn more than $70,000 and are from the "Finance" department.
+Sorts the dataset by salary in descending order and returns this sorted list.
+Notes
+The dataset is expected to have at least the following columns: "Name", "Salary", "Role", and "Department".
+Make sure to handle cases where there are fewer than 5 employees or where no employees meet the salary and department criteria.
+Sample Inputs and Outputs
+Input
+Sample Input URL
+Output
+
+Explanation
+The function computes the highest salaries and lists them.
+It calculates the average salary for the "Data Analyst" role.
+It filters employees in the "Finance" department with salaries above $70,000.
+Finally, it sorts the entire dataset by salary.
+Checklist
+Approach Level 1:
+Read the employee salary data from the CSV file.
+Display the top 5 highest-paid employees by sorting the salary column.
+Filter and calculate the average salary for the specified role.
+Use filtering conditions to find employees that meet specific salary and department requirements.
+Sort the entire dataset by salary in descending order and display the result.
+Approach Level 2:
+Load the CSV file containing employee salaries.
+Use sorting functions to extract the top 5 highest-paid employees from the dataset.
+To calculate the average salary for the "Data Analyst", filter the dataset for this specific role and compute the mean.
+Use conditional statements to select employees who earn above $70,000 and filter by the "Finance" department.
+Finally, sort the dataset by the salary column in descending order and return the full sorted dataset.
+
